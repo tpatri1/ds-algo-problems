@@ -2,63 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c1f29e1-52f6-40f1-8e8a-7ae91c16230c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/AddLinkedList$LinkedListNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/AddLinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/ArrayProblems.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/BalancedParanthesis.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/BinarySearchArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/Checker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/CoinChange.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/CoinChangerRec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/Container.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/ExecutorExample.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/GenericsDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/HalfIntegrator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/HeapOperations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/IceCreamParlour.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/InsertionOfSortedArrays.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/LambdaTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/LambdaTest$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/LambdaTest$Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/LambdaTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/MakingAnagrams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/MaxSlidingWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/Median.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/MyComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/PrintBinary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/QueueUsingStacks$MyQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/QueueUsingStacks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/ReverseKLinkedList$LinkedListNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/ReverseKLinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/RunningMedian$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/RunningMedian.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/StairCaseDP.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/Store.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/ThreadExample.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/ThreadInterrupt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/TriesContacts$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/TriesContacts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/TriesContacts1$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/TriesContacts1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/Deadlock$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/Deadlock$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/Deadlock.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/DemoThreadUnsafe$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/DemoThreadUnsafe$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/DemoThreadUnsafe$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/DemoThreadUnsafe$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/DemoThreadUnsafe$ThreadUnsafeCounter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/DemoThreadUnsafe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/Demonstration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/ReadWriteLock.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/SumArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/SumUpExample.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/TestReadWriteLock$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/TestReadWriteLock$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/TestReadWriteLock$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/TestReadWriteLock$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProblemSet/concurrency/problems/TestReadWriteLock.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/concurrency/problems/DeadLock.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/concurrency/DeadLock.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/concurrency/problems/DemoThreadUnsafe.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/concurrency/DemoThreadUnsafe.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/concurrency/problems/ReadWriteLock.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/concurrency/ReadWriteLock.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/concurrency/problems/SumArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/concurrency/SumArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/concurrency/problems/TestReadWriteLock.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/concurrency/TestReadWriteLock.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/AddLinkedList.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/AddLinkedList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/ArrayProblems.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ArrayProblems.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/BalancedParanthesis.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/BalancedParanthesis.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/BinarySearchArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/BinarySearchArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/CoinChange.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/CoinChange.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/CoinChangerRec.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/CoinChangerRec.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/ExecutorExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ExecutorExample.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/GenericsDemo.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/GenericsDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/HeapOperations.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/HeapOperations.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/IceCreamParlour.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/IceCreamParlour.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/InsertionOfSortedArrays.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/InsertionOfSortedArrays.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/LambdaTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/LambdaTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/MakingAnagrams.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/MakingAnagrams.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/MaxSlidingWindow.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/MaxSlidingWindow.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/Median.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/Median.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/MyComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/MyComparator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/PrintBinary.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/PrintBinary.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/QueueUsingStacks.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/QueueUsingStacks.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/RunningMedian.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/RunningMedian.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/StairCaseDP.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/StairCaseDP.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/ThreadExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ThreadExample.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/ThreadInterrupt.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ThreadInterrupt.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/TriesContacts.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TriesContacts.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/TriesContacts1.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TriesContacts1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/practice/problems/TruckTour.java" afterPath="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TruckTour.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ds-algo-problems.iml" afterPath="$PROJECT_DIR$/ds-algo-problems.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +47,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="InsertionOfSortedArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/practice/problems/InsertionOfSortedArrays.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/InsertionOfSortedArrays.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
@@ -83,10 +59,10 @@
         </entry>
       </file>
       <file leaf-file-name="ArrayProblems.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/practice/problems/ArrayProblems.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ArrayProblems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="53" column="41" lean-forward="false" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+            <state relative-caret-position="552">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +71,7 @@
         </entry>
       </file>
       <file leaf-file-name="Median.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/practice/problems/Median.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/Median.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
               <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
@@ -105,7 +81,7 @@
         </entry>
       </file>
       <file leaf-file-name="AddLinkedList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/practice/problems/AddLinkedList.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/AddLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
@@ -115,7 +91,7 @@
         </entry>
       </file>
       <file leaf-file-name="ReadWriteLock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/concurrency/problems/ReadWriteLock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/ReadWriteLock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
@@ -125,7 +101,7 @@
         </entry>
       </file>
       <file leaf-file-name="TestReadWriteLock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/concurrency/problems/TestReadWriteLock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/TestReadWriteLock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="35" />
@@ -135,7 +111,7 @@
         </entry>
       </file>
       <file leaf-file-name="SumArray.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/concurrency/problems/SumArray.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/SumArray.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
@@ -145,7 +121,7 @@
         </entry>
       </file>
       <file leaf-file-name="DemoThreadUnsafe.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/concurrency/problems/DemoThreadUnsafe.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/DemoThreadUnsafe.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1035">
               <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
@@ -155,7 +131,7 @@
         </entry>
       </file>
       <file leaf-file-name="DeadLock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/concurrency/problems/DeadLock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/DeadLock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="24" />
@@ -236,6 +212,7 @@
         <option value="$PROJECT_DIR$/src/concurrency/problems/DeadLock.java" />
         <option value="$PROJECT_DIR$/src/SubArrayWiithSumZeroCheck.java" />
         <option value="$PROJECT_DIR$/src/ArrayProblems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/problems/ArrayProblems.java" />
         <option value="$PROJECT_DIR$/src/practice/problems/ArrayProblems.java" />
       </list>
     </option>
@@ -282,11 +259,6 @@
               <item name="ds-algo-problems" type="b2602c69:ProjectViewProjectNode" />
               <item name="ds-algo-problems" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ds-algo-problems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds-algo-problems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -304,6 +276,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/trinath/ds-algo" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/trinath" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/practice/problems" />
     </key>
   </component>
@@ -365,11 +340,11 @@
     <configuration name="DemoThreadUnsafe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="concurrency.problems.*" />
+          <option name="PATTERN" value="main.java.problems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="concurrency.problems.DemoThreadUnsafe" />
+      <option name="MAIN_CLASS_NAME" value="main.java.problems.DemoThreadUnsafe" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -378,17 +353,17 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProblemSet" />
+      <module name="ds-algo-problems" />
       <envs />
     </configuration>
     <configuration name="Demonstration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="concurrency.problems.*" />
+          <option name="PATTERN" value="main.java.problems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="concurrency.problems.Demonstration" />
+      <option name="MAIN_CLASS_NAME" value="main.java.problems.Demonstration" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -397,17 +372,17 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProblemSet" />
+      <module name="ds-algo-problems" />
       <envs />
     </configuration>
     <configuration name="SumUpExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="concurrency.problems.*" />
+          <option name="PATTERN" value="main.java.problems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="concurrency.problems.SumUpExample" />
+      <option name="MAIN_CLASS_NAME" value="main.java.problems.SumUpExample" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -416,7 +391,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProblemSet" />
+      <module name="ds-algo-problems" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -608,16 +583,15 @@
       <workItem from="1578196751279" duration="5285000" />
       <workItem from="1578640755736" duration="171000" />
       <workItem from="1578641235979" duration="808000" />
-      <workItem from="1578768860697" duration="24000" />
+      <workItem from="1578768860697" duration="1224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93755000" />
+    <option name="totallyTimeSpent" value="94955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -687,115 +661,115 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/QueueUsingStacks.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/QueueUsingStacks.java</url>
+          <line>11</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/IceCreamParlour.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/IceCreamParlour.java</url>
+          <line>17</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/IceCreamParlour.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/IceCreamParlour.java</url>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/TriesContacts.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TriesContacts.java</url>
           <line>15</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/TriesContacts.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TriesContacts.java</url>
           <line>48</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/HeapOperations.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/HeapOperations.java</url>
           <line>132</line>
           <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/HeapOperations.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/HeapOperations.java</url>
           <line>129</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/HeapOperations.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/HeapOperations.java</url>
           <line>74</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/HeapOperations.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/HeapOperations.java</url>
           <line>57</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/PrintBinary.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/PrintBinary.java</url>
           <line>6</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/InsertionOfSortedArrays.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/InsertionOfSortedArrays.java</url>
           <line>29</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java</url>
           <line>73</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java</url>
           <line>46</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java</url>
           <line>68</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java</url>
           <line>43</line>
           <properties />
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java</url>
           <line>53</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java</url>
           <line>57</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/AddLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/AddLinkedList.java</url>
           <line>31</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/practice/problems/AddLinkedList.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/AddLinkedList.java</url>
           <line>44</line>
           <properties />
           <option name="timeStamp" value="55" />
@@ -809,14 +783,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/CoinChange.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/CoinChange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/QueueUsingStacks.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/QueueUsingStacks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
@@ -826,7 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/QueueUsingStacks.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/QueueUsingStacks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
@@ -836,28 +810,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/StairCaseDP.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/StairCaseDP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/MakingAnagrams.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/MakingAnagrams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/BalancedParanthesis.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/BalancedParanthesis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/MyComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/MyComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
@@ -878,7 +852,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/QueueUsingStacks.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/QueueUsingStacks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
@@ -888,7 +862,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/IceCreamParlour.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/IceCreamParlour.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
@@ -898,7 +872,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/TriesContacts.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TriesContacts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-616">
           <caret line="23" column="65" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
@@ -908,7 +882,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/TriesContacts1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TriesContacts1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
@@ -916,7 +890,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoinChangeRecursion.java" />
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/PrintBinary.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/PrintBinary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -924,28 +898,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/CoinChange.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/CoinChange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/CoinChangerRec.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/CoinChangerRec.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/TruckTour.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/TruckTour.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="36" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/BinarySearchArray.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/BinarySearchArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
@@ -994,14 +968,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/MaxSlidingWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/MaxSlidingWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/RunningMedian.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/RunningMedian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
           <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
@@ -1015,7 +989,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/ExecutorExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ExecutorExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
@@ -1043,14 +1017,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/GenericsDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/GenericsDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/HeapOperations.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/HeapOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="29" />
@@ -1062,21 +1036,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/ThreadInterrupt.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ThreadInterrupt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/LambdaTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/LambdaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/ThreadExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ThreadExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
@@ -1090,7 +1064,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/ReverseKLinkedList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ReverseKLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
@@ -1102,7 +1076,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/Median.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/Median.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
@@ -1110,7 +1084,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/AddLinkedList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/AddLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
@@ -1126,7 +1100,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/concurrency/problems/ReadWriteLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/ReadWriteLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
@@ -1141,7 +1115,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/concurrency/problems/SumArray.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/SumArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
@@ -1149,7 +1123,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/concurrency/problems/TestReadWriteLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/TestReadWriteLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="35" />
@@ -1157,7 +1131,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/concurrency/problems/DemoThreadUnsafe.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/DemoThreadUnsafe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
@@ -1165,7 +1139,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/concurrency/problems/DeadLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/concurrency/DeadLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="24" />
@@ -1174,7 +1148,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SubArrayWiithSumZeroCheck.java" />
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/InsertionOfSortedArrays.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/InsertionOfSortedArrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
@@ -1184,10 +1158,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/problems/ArrayProblems.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/trinath/ds-algo/ArrayProblems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="53" column="41" lean-forward="false" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+        <state relative-caret-position="552">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
