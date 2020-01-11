@@ -1,18 +1,19 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 import java.util.*;
 
-public class TriesContacts {
+public class TriesContacts1 {
     class Node {
         Map<Character, List< Node>> childNodes = new HashMap();
         boolean isWord;
 
     }
 
-    Node root;
+    //class Tries {
+    static Node root;
     Node traverseNode = root;
 
-    public void add(String word) {
+    public void addWord(String word) {
         boolean flag = false;
         Node nodePtr = null;
         char[] chars = word.toCharArray();
@@ -45,7 +46,7 @@ public class TriesContacts {
         return node;
     }
 
-    private  Node findNode(String word, Node traverseNode) {
+    private static Node findNode(String word, Node traverseNode) {
         if(word.length()>0) {
             if (word.length() == 1) {
                 if (traverseNode.childNodes.containsKey(word.charAt(0))) {
@@ -67,23 +68,26 @@ public class TriesContacts {
     }
 
 
-    private  void search(String word){
+    private static void search(String word){
         Node foundNode = findNode(word, root);
-        System.out.println(foundNode.childNodes.get(word.charAt(word.length()-1)).size());
-
+        int match = foundNode.childNodes.get(word.charAt(word.length()-1)).size();
+System.out.println(match);
     }
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        for(int a0 = 0; a0 < n; a0++){
-            String op = in.next();
-            String contact = in.next();
 
-        }
-        TriesContacts contacts = new TriesContacts();
-        contacts.add("hi");
-        contacts.add("his");
-        contacts.add("him");
-        contacts.search("hi");
+//}
+
+
+    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        int n = in.nextInt();
+//        for(int a0 = 0; a0 < n; a0++){
+//            String op = in.next();
+//            String contact = in.next();
+//        }
+        TriesContacts1 contacts = new TriesContacts1();
+        contacts.addWord("hack");
+        contacts.addWord("hackerank");
+        contacts.search("hac");
+       // contacts.search("hak");
     }
 }

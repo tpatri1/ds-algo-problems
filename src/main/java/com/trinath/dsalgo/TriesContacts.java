@@ -1,19 +1,18 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 import java.util.*;
 
-public class TriesContacts1 {
+public class TriesContacts {
     class Node {
         Map<Character, List< Node>> childNodes = new HashMap();
         boolean isWord;
 
     }
 
-    //class Tries {
-    static Node root;
+    Node root;
     Node traverseNode = root;
 
-    public void addWord(String word) {
+    public void add(String word) {
         boolean flag = false;
         Node nodePtr = null;
         char[] chars = word.toCharArray();
@@ -46,7 +45,7 @@ public class TriesContacts1 {
         return node;
     }
 
-    private static Node findNode(String word, Node traverseNode) {
+    private  Node findNode(String word, Node traverseNode) {
         if(word.length()>0) {
             if (word.length() == 1) {
                 if (traverseNode.childNodes.containsKey(word.charAt(0))) {
@@ -68,26 +67,23 @@ public class TriesContacts1 {
     }
 
 
-    private static void search(String word){
+    private  void search(String word){
         Node foundNode = findNode(word, root);
-        int match = foundNode.childNodes.get(word.charAt(word.length()-1)).size();
-System.out.println(match);
+        System.out.println(foundNode.childNodes.get(word.charAt(word.length()-1)).size());
+
     }
-
-//}
-
-
     public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        int n = in.nextInt();
-//        for(int a0 = 0; a0 < n; a0++){
-//            String op = in.next();
-//            String contact = in.next();
-//        }
-        TriesContacts1 contacts = new TriesContacts1();
-        contacts.addWord("hack");
-        contacts.addWord("hackerank");
-        contacts.search("hac");
-       // contacts.search("hak");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int a0 = 0; a0 < n; a0++){
+            String op = in.next();
+            String contact = in.next();
+
+        }
+        TriesContacts contacts = new TriesContacts();
+        contacts.add("hi");
+        contacts.add("his");
+        contacts.add("him");
+        contacts.search("hi");
     }
 }

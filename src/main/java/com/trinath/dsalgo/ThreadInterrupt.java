@@ -1,4 +1,4 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;

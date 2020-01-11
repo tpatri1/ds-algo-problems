@@ -1,4 +1,4 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

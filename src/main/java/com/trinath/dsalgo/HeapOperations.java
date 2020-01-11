@@ -1,4 +1,4 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 public class PrintBinary {
     private static int printBinary(int n) {

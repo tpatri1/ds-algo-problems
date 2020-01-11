@@ -1,5 +1,4 @@
-package practice.problems;
-
+package com.trinath.dsalgo;
 import java.io.*;
 import java.util.*;
 import java.text.*;

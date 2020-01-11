@@ -1,4 +1,4 @@
-package practice.problems;
+package com.trinath.dsalgo;
 
 public class AddLinkedList {
     static class LinkedListNode{
