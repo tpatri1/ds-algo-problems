@@ -1,4 +1,4 @@
-package com.trinath.learnbay;
+package com.trinath.dsalgo.lb;
 
 public class StringToIntegerConversion {
 

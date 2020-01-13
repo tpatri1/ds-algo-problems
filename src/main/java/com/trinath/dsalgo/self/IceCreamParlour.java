@@ -1,4 +1,4 @@
-package com.trinath.dsalgo;
+package com.trinath.dsalgo.self;
 import java.io.*;
 import java.util.*;
 import java.text.*;

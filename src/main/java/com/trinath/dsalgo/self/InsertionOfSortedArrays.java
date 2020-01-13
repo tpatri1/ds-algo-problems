@@ -1,4 +1,4 @@
-package com.trinath.dsalgo;
+package com.trinath.dsalgo.self;
 
 import sun.jvm.hotspot.utilities.Assert;
 

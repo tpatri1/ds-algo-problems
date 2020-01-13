@@ -1,4 +1,4 @@
-package com.trinath.learnbay;
+package com.trinath.dsalgo.lb;
 
 //with out using any extra memory
 class Swap3Numbers {

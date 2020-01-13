@@ -1,4 +1,4 @@
-package com.trinath.dsalgo;
+package com.trinath.dsalgo.self;
 
 public class CoinChangerRec {
 
