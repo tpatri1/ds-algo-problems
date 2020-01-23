@@ -2,13 +2,22 @@ package com.trinath.dsalgo.lb;
 
 import java.util.Stack;
 
-public class MyStack {
+public class MyDynamicStack {
     static int[] arr = new int[100];
     static int top =-1;
 
+    static void increaseSize(){
+        int[] arr1 = new int[arr.length * 2];
+        for(int i=0; i<arr.length; i++){
+            arr1[i] = arr[i];
+        }
+        arr =  arr1;
+    }
 
     static void push(int i) throws Exception{
-        if(isFull()) throw new Exception("Stack is full");
+        if(isFull()) {
+            increaseSize();
+        }
         arr[++top] = i;
     }
     static int pop() throws Exception{
@@ -35,7 +44,7 @@ public class MyStack {
     }
 
     static boolean isFull(){
-        return top==99;
+        return top==arr.length-1;
     }
 
     static void printStack(){
@@ -45,11 +54,14 @@ public class MyStack {
     }
 
     public static void main(String args[]) throws Exception {
+        for(int i=0; i<200; i++){
+            push(i);
+        }
         push(100);
         push(200);
         push(300);
         printStack();
-        System.out.println("peek .."+peek());
+        System.out.println("size .."+arr.length);
         pop();
         printStack();
 
