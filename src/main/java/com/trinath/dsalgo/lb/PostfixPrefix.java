@@ -47,7 +47,8 @@ public class PostfixPrefix {
     static String infixToPostfix(String postfix){
         String infix ="";
 
-       return infix;
+
+        return infix;
     }
 
     static int evaluate(int top, int nextTop, String operator){
