@@ -2,7 +2,7 @@ package com.trinath.dsalgo.lb;
 
 import java.util.EmptyStackException;
 import java.util.Stack;
-
+//https://leetcode.com/problems/validate-stack-sequences/submissions/
 public class StackOperationsSeq {
 
     static boolean checkStackOperationsSeq(int[] pushed, int[] popped){
