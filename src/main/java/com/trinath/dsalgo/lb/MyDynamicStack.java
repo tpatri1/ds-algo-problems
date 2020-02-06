@@ -53,6 +53,7 @@ public class MyDynamicStack {
         }
     }
 
+
     public static void main(String args[]) throws Exception {
         for(int i=0; i<200; i++){
             push(i);
@@ -67,10 +68,5 @@ public class MyDynamicStack {
 
 
     }
-//    static Stack reverse(Stack<Integer> stack){
-//        int a = (int) stack.pop();
-//        //reverse_helper(stack, a);
-//    }
-
 
 }
