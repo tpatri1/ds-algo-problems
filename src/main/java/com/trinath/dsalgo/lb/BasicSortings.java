@@ -60,24 +60,25 @@ public class BasicSortings {
     int size = arr.length;
     //Heapify each element from second lowest level
         for(int i=size/2 -1;i>=0;i-- ){
-            heapify(i,size-1,arr);
+            heapifyDown(i,size-1,arr);
         }
       //Take out and swap
       for(int i=0; i<size-1; i++){
-            swap(0,size-i-1, arr);//Take top out and swap with last element of unsorted portion  so, new_size = size -i
-          heapify(0,size-i-1,arr);
+            swap(0,size-i-1, arr);//Take top out and swap with last element of unsorted portion  so, new_size = size -i "This is swim up"
+          heapifyDown(0,size-i-1,arr); // This is sink down
       }
         return arr;
     }
 
     /**
-     *
+     * This is heapify down, after swapping last elemet to top/ index 0 for removing top  or just making an heap
+     * Note:: To add an element , we should add the element at the last and then heapiify up to the root to keep th disturbed heap as heap after addiition, check HeapOerations.java class
      * @param i  start of point
      * @param n - end here
      * @param arr array
      * @return
      */
-    public static void heapify(int i,int n,int[] arr){
+    public static void heapifyDown(int i,int n,int[] arr){
         //Base case nothing
         int smallest = i;// assume parent is largest
         int l= 2*i+1;
@@ -91,7 +92,7 @@ public class BasicSortings {
             }
             if(smallest!=i){ // stops here, base condition
                 swap(i,smallest,arr);
-                heapify(smallest,n,arr);
+                heapifyDown(smallest,n,arr);
             }
 
     }
