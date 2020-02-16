@@ -1,5 +1,5 @@
 package com.trinath.dsalgo.lb;
-
+//https://leetcode.com/problems/gas-station/
 public class PetrolPump {
     private int findStartNode(int[] gas, int[] cost){
         int nPumps = gas.length;
@@ -12,13 +12,13 @@ public class PetrolPump {
         int j=-1; //Potential Start index
         //int k=0;
         int count = 0;
-        int i;
+        int i=0;
         int sum=0;
 
         while(i1<2*nPumps){
 
             //To make circular
-            i=(i1+nPumps)%(nPumps); // i+nPumps to make sure there is no negative for i-1 to make circular queue;
+            i=(i1+1)%(nPumps); // i+1 or i+nPumps %nPumps will make ciircular to make sure there is no negative for i-1 to make circular queue;
 
             if(i1<nPumps) { // Set diff once in the loop for n pumps
                 diff[i] = gas[i] - cost[i];
