@@ -172,6 +172,46 @@ public class SubArraySumKProblems {
         return result;
 
     }
+
+    /**
+     * This method returns the start and end index of the minimum sum of its elements along with its sum for sub array of size K
+     * @param arr input array
+     * @param K size of subarray
+     * @return
+     */
+    private static int[]  minimumSumSubArrayOfSizeK(int[] arr, int K){
+        //check if array size < K
+        if(arr.length<K){
+            throw new UnsupportedOperationException("Array size is small");
+        }
+        int[] result = new int[3];
+        int minSum=0;
+        int start=0, end =0;
+        //Find first K sum
+        for(int i=0; i<K; i++){
+            minSum+=arr[i];
+            end=i;
+        }
+        int i=0;
+        int sum = minSum;
+        for(int j=K; j<arr.length; j++){
+           sum += arr[j]-arr[i++]; // pre increment J and post increment i
+            if(sum<minSum){
+                minSum= sum;
+                start=i;
+                end=j;
+            }
+        }
+        result[0]=start;
+        result[1]=end;
+        result[2]=minSum;
+        return result;
+    }
+      static void printArray(int[] nums){
+        for(int i=0; i<nums.length; i++){
+            System.out.println(nums[i]);
+        }
+    }
     public static void main(String args[]){
         SubArraySumKProblems ssa = new SubArraySumKProblems();
         int[] a={1, 0,-1,2,-1,2};
@@ -184,6 +224,7 @@ public class SubArraySumKProblems {
         int[] a4 ={17,85,93,-45,-21};
         int[] a5 = {-11,-15,76,41,-41,68,41,12,73,-8};
         int[] a6 = {-34,37,51,3,-12,-50,51,100,-47,99,34,14,-13,89,31,-14,-44,23,-38,6};
+        int[] b1={10, 4, 3, 5 , 6, 3, 8 , 1};
         //System.out.println(ssa.shortestSubArraySumAtleastK_slow(a2,4));
         //System.out.println(ssa.shortestSubArraySumAtleastK_slow(a1,1));
         //System.out.println(ssa.shortestSubArraySumAtleastK_fast(a2,4));
@@ -198,5 +239,8 @@ public class SubArraySumKProblems {
         System.out.println(ssa.countSubArraySumK(a,3));
         System.out.println("Count should be 2: "+ssa.countSubArraySumK(a3,2));
         System.out.println("Count should be 5: "+ssa.countSubArraySumK(b,3));
+
+        printArray(minimumSumSubArrayOfSizeK(a,2));
+       printArray(minimumSumSubArrayOfSizeK(b1,3));
     }
 }
