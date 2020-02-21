@@ -236,15 +236,67 @@ public class TreeOperations {
         return node;
     }
 
-
+//Total number of nodes in th tree
     private int sizeOfTree(Node node) {
-        if(node==null){
+        if (node == null) {
             return 0;
         }
         int left = sizeOfTree(node.left);
         int right = sizeOfTree(node.right);
-        return 1+ left+right;
+        return 1 + left + right;
 
+    }
+    //Maximum height of the tree, root height is zero and grows till leaf
+    private int height(Node node){
+        if(node==null){
+            return 0;
+        }
+        else{
+            int lheight = height(node.left);
+            int rheight = height(node.right);
+            return 1+ Math.max(lheight,rheight); // Index 1 based
+        }
+
+    }
+
+    //Diameter of th tree: algo max of sum of heights , left diameter and right diameter
+    private int diameter(Node node){
+        if(node==null){
+            return 0;
+        }
+        int lheight = height(node.left);
+        int rheight = height(node.right);
+
+        int ldiameter = diameter(node.left);
+        int rdiameter = diameter(node.right);
+
+        return (Math.max(1+lheight+rheight, Math.max(ldiameter,rdiameter)));// 1+lheight+rheight gives one passes through root
+    }
+//Do Inorder Traversal until count =K
+    private int sumOfKSmallestElements(Node node, int K){
+        if(node==null){
+            return 0;
+        }
+        Node curr = node;
+        Stack stack = new Stack();
+        int count = 0;
+        int sum=0;
+
+        //Has to be done using stack, that internally does the same thing as recursion
+        while((!stack.isEmpty() || curr!=null) && count<K){
+            if(curr!=null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            else{
+                Node node1 = (Node) stack.pop();
+                sum+=node1.val;
+                ++count;
+                curr = node1.right;// if it is a leaf it pops again
+            }
+
+        }
+        return sum;
     }
 
     public static void main(String args[]){
@@ -258,7 +310,10 @@ public class TreeOperations {
         bst.insertInBST(bst.root, -7);
         bst.insertInBST(bst.root, 4);
         bst.insertInBST(bst.root, 8);
-        System.out.println(bst.sizeOfTree(root));
+        System.out.println("size of tree : "+bst.sizeOfTree(root));
+        System.out.println("height of tree: "+bst.height(bst.root));
+        System.out.println("diameter of tree: "+bst.diameter(bst.root));
+        System.out.println("Sum of K elements: "+bst.sumOfKSmallestElements(bst.root, 4));
         System.out.println("Start In Order");
         bst.inOrderRec(bst.root);
         bst.inOrderIterative(bst.root);
