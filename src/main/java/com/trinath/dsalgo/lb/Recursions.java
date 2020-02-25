@@ -1,8 +1,6 @@
 package com.trinath.dsalgo.lb;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 public class Recursions {
     /**
@@ -46,6 +44,34 @@ public class Recursions {
         }
     }
 
+    /**
+     * Input - len=2 - print 00, 01, 10,11
+     * Print leaf level nodes that has the enumurated string
+     * @param height is length of the string as well
+     */
+    private static List enumurateBinaryString(int height){
+        //List<String> result = new ArrayList<>();
+        return enumurateBinaryStringHelper(height);
+    }
+
+    private static List enumurateBinaryStringHelper(int height) {
+        if(height==1 ){
+            List result = Arrays.asList("0","1");
+            return result;
+
+        }
+        else{
+            List<String> prev= enumurateBinaryStringHelper(height - 1); // DONT use result as reference as there is no use
+             List result = new ArrayList<>();// We must reset the result as we are acting on the result
+                for(int i=0; i< prev.size(); i++ ){
+                    result.add(prev.get(i)+"0");
+                    result.add(prev.get(i)+"1");
+                }
+            return result;
+        }
+
+    }
+
     public static void main(String args[]){
         long startTs = System.nanoTime();
         int fib1 = fib(20);
@@ -59,6 +85,7 @@ public class Recursions {
         src.push(3);
         src.push(1);
         towerOfHanoi(src.size(),src,new Stack(), new Stack());
+        System.out.println(enumurateBinaryString(3));
     }
 
 
