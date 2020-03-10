@@ -28,9 +28,9 @@ public class GraphOperations {
                 return false;
             if (obj == this)
                 return true;
-            return this.getLabel() == ((Vertex) obj).getLabel();
+            return this.getLabel().equals(((Vertex) obj).getLabel());
         }
-        //Otherwise the map will put each vertext separately as the hashcode is going to be different by default
+        //Otherwise the map will put each vertex separately as the hashcode is going to be different by default
         @Override
         public int hashCode() {
             return label.hashCode();
@@ -38,11 +38,11 @@ public class GraphOperations {
     }
     //Simple Graph Using adjacency list
     private Map<Vertex,List<Vertex>>  adjList ; // vertex to edges
-    private Map<Vertex, Boolean> visited ;
+
 
     public GraphOperations(){
         this.adjList = new HashMap<>();
-        this.visited = new HashMap<>();
+
     }
 
     private GraphOperations  addVertex(String  vertexName){

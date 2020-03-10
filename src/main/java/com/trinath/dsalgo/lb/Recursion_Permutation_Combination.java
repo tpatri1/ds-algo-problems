@@ -2,7 +2,7 @@ package com.trinath.dsalgo.lb;
 
 import java.util.*;
 
-public class Recursions {
+public class Recursion_Permutation_Combination {
     /**
      * A man puts a pair of rabbit in a closed room. Each pair produce a pair every month from second month onward(let's say they take a month
      * to mature and from second months starts produce and none of the rabbit dies).
