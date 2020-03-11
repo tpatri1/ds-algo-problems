@@ -167,9 +167,10 @@ import java.util.stream.Collectors;
     //Minimum Spanning tree(connect all nodes(n) and n-1 edges with minimum sum of weights) ; Spannig tree does not have a cycle
 
     /**
-     * vhttps://www.youtube.com/watch?v=4ZlRH0eK-qQ&t=720shttps://www.youtube.com/watch?v=4ZlRH0eK-qQ&t=720s
+     * vhttps://www.youtube.com/watch?v=4ZlRH0eK-qQ&t=720shttps://www.youtube.com/watch?v=4ZlRH0eK-qQ&t=720s -- Ignore select min edge per video, rather start wiith any source and its min out edge
      * https://www.youtube.com/watch?v=oP2-8ysT3QQ&t=714s
-     * Algo, A gready approach is taken for Prims MST starts with a any source Vertex , It finds all the outgoing edges of it and select the min cost edge(source--> dest) of it( and add to result MST) and add the source to the visited node.
+     * https://www.baeldung.com/java-prim-algorithm
+     * Algo, A gready approach is taken for Prims MST starts with a "ANY source Vertex" , It finds all the outgoing edges of it and select the min cost edge(source--> dest) of it( and add to result MST) and add the source to the visited node.
      * The destination Vertex of selected(once) min edge is taken as next source node add all of it's out going edge to select minimum cost edges of ALL visited nodes so far. If the min edge's destination is already visited one then select next min edge until minHeap is empty
      * and finally the MST is returned when all vertices are visited
      *
@@ -207,9 +208,50 @@ import java.util.stream.Collectors;
             return mst;
         }
 
-        //Minimum Spanning tree - Kruskal
 
-        //- Topological Sorting
+    /**
+     * Minimum Spanning tree - Kruskal - Find the minimum cost edge and add to result, find the next minimum edge and so on UNTIL all vertices are visited
+     * @param graph
+     * @return
+     */
+        private Map<Vertex, List<Edge>> kruskalMST(WeightedGraph graph){
+            Map<Vertex,List<Edge>> adjList = graph.adjList;
+            Map<Vertex, List<Edge>> mst = new HashMap<>(); // Same structure as graph adjacency list but no cycles
+            Set<Vertex> visited = new HashSet<Vertex>();
+            PriorityQueue<Edge> minHeapEdges = buildMinHeapEdge(adjList);
+            while(adjList.size()!=visited.size() && !minHeapEdges.isEmpty()){ //UNTIL all vertices are visited
+                Edge minEdge = minHeapEdges.poll();
+                visited.add(minEdge.getSource());
+                visited.add(minEdge.getDestination());
+                List<Edge> existingEdges = mst.getOrDefault(minEdge.getSource(),new ArrayList<>());
+                existingEdges.add(minEdge);
+                mst.put(minEdge.getSource(),existingEdges);
+            }
+            return mst;
+        }
+        private PriorityQueue<Edge> buildMinHeapEdge(Map<Vertex,List<Edge>> adjList){
+            PriorityQueue<Edge> edgeMinHeap = new PriorityQueue<>(new Comparator<Edge>() {
+                @Override
+                public int compare(Edge e1, Edge e2) {
+                    return e1.getWeight() - e2.getWeight();
+                }
+            });
+
+            Iterator itr = adjList.keySet().iterator();
+            while(itr.hasNext()){
+                List<Edge> edges = (List<Edge>) adjList.get(itr.next());
+                for(Edge edge: edges){
+                    edgeMinHeap.add(edge);
+                }
+            }
+        return edgeMinHeap;
+        }
+
+        //Single Source Shortest Path - Dijkstra
+
+        //Single Source Shortest Path - Bellman Ford
+
+        //Cycle Detection - Union Find
 
         private void createGraph(){
         addVertex("A").addEdge("A","B",1);
@@ -219,6 +261,7 @@ import java.util.stream.Collectors;
         addEdge("C","D",2);
         addEdge("D","E",5);
         addEdge("E","D",3);
+        addEdge("B","D",1);
 
 
         }
@@ -232,8 +275,11 @@ import java.util.stream.Collectors;
             System.out.println("BFS: "+graph.bfs(graph,new Vertex("A")));
             //assertEquals("[Bob, Rob, Maria, Alice, Mark]", graph.dfs(graph, new Vertex("Bob").toString());
             //assertEquals("[Bob, Alice, Rob, Mark, Maria]", graph.bfs(graph, new Vertex("Bob")).toString());
-            System.out.println("MST");
+            System.out.println("Prims MST");
             graph.printGraph(graph.primsMST(graph,new Vertex("A")));
+            System.out.println("Kruskal MST");
+            graph.printGraph(graph.kruskalMST(graph));
+
         }
     }
 

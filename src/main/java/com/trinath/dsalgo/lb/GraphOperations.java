@@ -1,6 +1,5 @@
 package com.trinath.dsalgo.lb;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -112,26 +111,65 @@ public class GraphOperations {
 
     //Minimum Spanning tree - Kruskal
 
-    //- Topological Sorting
+    //- Topological Sorting Using recursive DFS.. Ignore already visited If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well, ignore/continue nxode  If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well
+    private Stack<Vertex> topologicalSort_DFS(GraphOperations graph){// We don't need a weighted grap for this
+        Map<Vertex, List<Vertex>> adjList = graph.adjList;
+        Stack<Vertex> sorted = new Stack<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        //Iterate each vertex
+        Iterator itr = adjList.keySet().iterator();
+        while(itr.hasNext()){
+            Vertex vertex = (Vertex) itr.next();
+            if(!visited.contains(vertex)){
+                topologicalSortHelper(vertex, sorted, visited, adjList);
+            }
+        }
+        return sorted;
+
+    }
+
+    private void topologicalSortHelper(Vertex vertex, Stack<Vertex> sorted, Set<Vertex> visited, Map<Vertex, List<Vertex>> adjList){
+        visited.add(vertex);
+        if(adjList.containsKey(vertex)) {
+            for (Vertex child : adjList.get(vertex)) {// If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well
+                if (visited.contains(child)) {
+                    continue;
+                }
+                topologicalSortHelper(child, sorted, visited, adjList); // this recursion does DFS
+            }
+        }
+       sorted.push(vertex);//add the leaf
+    }
+
+    private Stack<Vertex> topologicalSort_BFS(GraphOperations graph) {
+        Stack<Vertex> sorted = new Stack<>();
+        return sorted;
+    }
 
     private void createGraph(){
-//        addVertex("A").addEdge("A","B");
-//        addEdge("A","C");
-//        addVertex("D").addEdge("D","C");
-//        addEdge("D","E");
-//        addEdge("G","H");
+        addEdge("A","B");
+        addEdge("A","E");
+        addEdge("B","E");
+        addEdge("B","C");
+        addEdge("C","D");
+        addEdge("D","E");
+        addEdge("E","D");
+        addEdge("B","D");
+        //addEdge("D","B");
 
-        addVertex("Bob");
-        addVertex("Alice");
-        addVertex("Mark");
-        addVertex("Rob");
-        addVertex("Maria");
-        addEdge("Bob", "Alice");
-        addEdge("Bob", "Rob");
-        addEdge("Alice", "Mark");
-        addEdge("Rob", "Mark");
-        addEdge("Alice", "Maria");
-        addEdge("Rob", "Maria");
+
+//        addVertex("Bob");
+//        addVertex("Alice");
+//        addVertex("Mark");
+//        addVertex("Rob");
+//        addVertex("Maria");
+//        addEdge("Bob", "Alice");
+//        addEdge("Bob", "Rob");
+//        addEdge("Alice", "Mark");
+//        addEdge("Rob", "Mark");
+//        addEdge("Alice", "Maria");
+//        addEdge("Rob", "Maria");
 
 
     }
@@ -141,9 +179,15 @@ public class GraphOperations {
         graph.createGraph();
         graph.printGraph(graph);
         //https://www.baeldung.com/java-graphs
-        System.out.println("DFS: "+graph.dfs(graph,new Vertex("Bob")));
-        System.out.println("BFS: "+graph.bfs(graph,new Vertex("Bob")));
+       // System.out.println("DFS: "+graph.dfs(graph,new Vertex("A")));
+       // System.out.println("BFS: "+graph.bfs(graph,new Vertex("A")));
         //assertEquals("[Bob, Rob, Maria, Alice, Mark]", graph.dfs(graph, new Vertex("Bob").toString());
         //assertEquals("[Bob, Alice, Rob, Mark, Maria]", graph.bfs(graph, new Vertex("Bob")).toString());
+        System.out.println("Topological Sort");
+        Stack<Vertex> sorted =graph.topologicalSort_DFS(graph);
+        while(!sorted.isEmpty()){
+            Vertex  v = sorted.pop();
+            System.out.println(v.getLabel());
+        }
     }
 }
