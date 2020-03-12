@@ -111,7 +111,14 @@ public class GraphOperations {
 
     //Minimum Spanning tree - Kruskal
 
-    //- Topological Sorting Using recursive DFS.. Ignore already visited If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well, ignore/continue nxode  If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well
+
+    /**
+     * https://www.youtube.com/watch?v=ddTC4Zovtbc
+     * Topological Sorting Using recursive DFS.. Ignore already visited If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well, ignore/continue nxode  If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well
+     * This does not work when the graph has a loop - so use cycle detection
+     * @param graph
+     * @return
+     */
     private Stack<Vertex> topologicalSort_DFS(GraphOperations graph){// We don't need a weighted grap for this
         Map<Vertex, List<Vertex>> adjList = graph.adjList;
         Stack<Vertex> sorted = new Stack<>();
@@ -142,10 +149,59 @@ public class GraphOperations {
        sorted.push(vertex);//add the leaf
     }
 
-    private Stack<Vertex> topologicalSort_BFS(GraphOperations graph) {
-        Stack<Vertex> sorted = new Stack<>();
+    /**
+     * https://www.youtube.com/watch?v=0LjVxtLnNOk -- Stack based
+     * https://www.youtube.com/watch?v=rG2-_lgcZzo  - Queue BFS based
+     * Topological Sort using BFS and converting a dependency matrix to adjacencylist grap representation
+     *[2, 3] means 2 is dependent on 3 like 3->2 if one node is dependent on multiple iis written by [2,3], [2,1]
+     * @param dependencies
+     * @return
+     * @throws Exception
+     */
+    private Queue<Integer> topologicalSort_BFS(int[][] dependencies) throws Exception {
+
+        Map<Integer,Integer> inDegree = new HashMap<>();//can be done as array if from 0 to n ..new int[dependencies.length];
+        Map<Integer, List<Integer>> adjList = new HashMap<>(); // [2,1] [3,1] becomes 3<-1->2 that is  1->2, 1->3 that is : {1,[2,3]}
+        //Crteate an adjacency list from 2d array
+        for(int[] row : dependencies){ // process every record of matrix or 2D array
+            List<Integer> list = adjList.getOrDefault(row[1],new ArrayList<>());// second colum is the dependency to 1st column
+            list.add(row[0]);
+            inDegree.put(row[0],inDegree.getOrDefault(row[0],0)+1); //[2,1] [2,3] in-degree(iinward arrow) of 2 is 2 from 1 & 3
+            adjList.put(row[1],list);
+        }
+
+        //Now create a queue and add all indegree 0 and process to do BFS
+        Queue<Integer> queue = new LinkedList();
+        for(Integer key: adjList.keySet()){
+            if(!inDegree.containsKey(key) || inDegree.get(key)==0)// independent
+            {
+                queue.add(key);
+            }
+        }
+        //Process indegree 0 and 1 s of >1 then can't do sorting as there is a cycle
+       Queue<Integer> sorted = new LinkedList() ;
+
+       while(!queue.isEmpty()){
+           int item = queue.poll();
+           sorted.add(item);
+           if(!adjList.containsKey(item)){
+               continue;
+           }//else
+           for(int neighbour:adjList.get(item)){
+               int i = inDegree.get(neighbour)-1; // each time we process an item, reduce in degree of its neighbour
+               inDegree.put(neighbour,i);
+               if(i==0) {
+                   queue.add(neighbour);
+               }
+           }
+       }
+       if(sorted.size()!=dependencies.length+1){// vertices
+           throw new Exception("All vertices are not sorted topologically: "+sorted.size()+" vertices: "+Integer.valueOf(dependencies.length+1));// there is loop
+       }
         return sorted;
     }
+
+
 
     private void createGraph(){
         addEdge("A","B");
@@ -179,15 +235,27 @@ public class GraphOperations {
         graph.createGraph();
         graph.printGraph(graph);
         //https://www.baeldung.com/java-graphs
-       // System.out.println("DFS: "+graph.dfs(graph,new Vertex("A")));
-       // System.out.println("BFS: "+graph.bfs(graph,new Vertex("A")));
+        System.out.println("DFS: "+graph.dfs(graph,new Vertex("A")));
+        System.out.println("BFS: "+graph.bfs(graph,new Vertex("A")));
         //assertEquals("[Bob, Rob, Maria, Alice, Mark]", graph.dfs(graph, new Vertex("Bob").toString());
         //assertEquals("[Bob, Alice, Rob, Mark, Maria]", graph.bfs(graph, new Vertex("Bob")).toString());
-        System.out.println("Topological Sort");
+        System.out.println("Topological Sort DFS");
         Stack<Vertex> sorted =graph.topologicalSort_DFS(graph);
         while(!sorted.isEmpty()){
             Vertex  v = sorted.pop();
             System.out.println(v.getLabel());
+        }
+        System.out.println("Topological Sort BFS");
+        int[][] dependencies = {{2,1},{3,2},{3,4},{5,3},{2,7}}; // 1->4->2->3->5
+        Queue<Integer> sortedBFS=null;
+        try {
+            sortedBFS=graph.topologicalSort_BFS(dependencies);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        while(!sortedBFS.isEmpty()){
+            int item = sortedBFS.remove();
+            System.out.println(item);
         }
     }
 }
