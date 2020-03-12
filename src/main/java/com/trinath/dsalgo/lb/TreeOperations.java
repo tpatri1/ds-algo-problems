@@ -298,6 +298,10 @@ public class TreeOperations {
         }
         return sum;
     }
+    //Similar to as printing all binary string for a number
+    private void printAllPathToLeaves(Node node){
+
+    }
 
     public static void main(String args[]){
         Node root = new Node(5);
