@@ -270,6 +270,7 @@ import java.util.stream.Collectors;
 
     /**
      * https://www.youtube.com/watch?v=XB4MIexjvY0
+     * Limitaion : does not work for -ve weights, Use Bellman Ford for -ve weights
      * Single Source Shortest Path - Dijkstra - it find shortest path from a source to all vertices, we have added a property int dist for distance , that is initialized to Infinity i.e, Integer.MAX
      * Start with a source , add its destination vertex if old distance is greater than newly calculated distance(destination distance source > source dist +edge weight , then update dest dist with new value) and add to the heap.
      * If the heap has already an item remove the old and add the destination with new dist
@@ -313,10 +314,10 @@ import java.util.stream.Collectors;
         return visited;
     }
 
-        //Single Source Shortest Path - Bellman Ford
+        //TODO::Single Source Shortest Path - Bellman Ford
 
 
-        //Cycle Detection - Union Find
+        //TODO::Cycle Detection - Union Find
 
         private void createGraph(){
         addVertex("A").addEdge("A","B",1);

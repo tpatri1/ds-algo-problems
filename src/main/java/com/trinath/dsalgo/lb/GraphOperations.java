@@ -68,6 +68,20 @@ public class GraphOperations {
         }
     }
 
+    /*
+    Pseudo code that is for both DFS and BFS using stack and queue respectively
+    def search(root , st){
+    st = new()
+    st.add(root);
+    while(!st.isEmpty()){
+        Node node = st.remove();
+        process(node);
+        for(Node child: node.getAdjList/Children()){// this is most important to form graph
+            st.add(child);
+            }
+        }
+    }
+     */
     //DFS Use a stack
     private Set<String> dfs(GraphOperations graph, Vertex root){
         Set<String> visited = new LinkedHashSet<>();
@@ -146,7 +160,7 @@ public class GraphOperations {
                 topologicalSortHelper(child, sorted, visited, adjList); // this recursion does DFS
             }
         }
-       sorted.push(vertex);//add the leaf
+       sorted.push(vertex);//add the leaf as that is independent, this is head recursion after reaching top of the recursive stack, pocessing starts i.e, leaf added to sorted is processing ( while tail recursion is lie e loop)
     }
 
     /**
