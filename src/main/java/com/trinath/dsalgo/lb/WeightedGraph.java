@@ -14,9 +14,20 @@ import java.util.stream.Collectors;
     public class WeightedGraph {
         static class Vertex{
             String label;
+            int dist;
             Vertex(String label) {
                 this.label = label;
+                this.dist = Integer.MAX_VALUE; // distance is To use for Dijkestra and Bellman Ford Shortest Path
             }
+
+            public int getDist() {
+                return dist;
+            }
+
+            public void setDist(int dist) {
+                this.dist = dist;
+            }
+
             private String getLabel(){
                 return label;
             }
@@ -33,6 +44,11 @@ import java.util.stream.Collectors;
             @Override
             public int hashCode() {
                 return label.hashCode();
+            }
+
+            @Override
+            public String toString() {
+                return getLabel()+" : "+getDist();
             }
         }
         static class Edge{
@@ -89,8 +105,11 @@ import java.util.stream.Collectors;
         //Simple Graph Using adjacency list, Also, it can be represented as Graph(Vs,Es) there E(V1,V2,weight)
         private Map<Vertex,List<Edge>> adjList ; // vertex to edges; Alternative: we can have  a Vertex v and List<Edge> adjacency list as well instead of map , here Edge has only destination and weight as Source vertex is given in the key of the map
 
+        public Map<Vertex, List<Edge>> getAdjList() {
+            return adjList;
+        }
 
-        public WeightedGraph(){
+    public WeightedGraph(){
             this.adjList = new HashMap<>();
 
         }
@@ -247,11 +266,58 @@ import java.util.stream.Collectors;
         return edgeMinHeap;
         }
 
-        //Single Source Shortest Path - Dijkstra
 
-        //Single Source Shortest Path - Bellman Ford
 
-        //Cycle Detection - Union Find
+    /**
+     * https://www.youtube.com/watch?v=XB4MIexjvY0
+     * Limitaion : does not work for -ve weights, Use Bellman Ford for -ve weights
+     * Single Source Shortest Path - Dijkstra - it find shortest path from a source to all vertices, we have added a property int dist for distance , that is initialized to Infinity i.e, Integer.MAX
+     * Start with a source , add its destination vertex if old distance is greater than newly calculated distance(destination distance source > source dist +edge weight , then update dest dist with new value) and add to the heap.
+     * If the heap has already an item remove the old and add the destination with new dist
+     *And add the vertex to heap and to visited set once complete.
+     * @param graph
+     * @param src
+     * @return
+     */
+    private Set<Vertex> shortestPathDijkestra(WeightedGraph graph, Vertex src) {
+        Map<Vertex, List<Edge>> adjList = graph.getAdjList(); // By default dist is Integer.MAX in the beginning
+        Set<Vertex> visited = new HashSet<>(); //To keep track
+        PriorityQueue<Vertex> minDistHeap = new PriorityQueue<>(new Comparator<Vertex>() {
+            @Override
+            public int compare(Vertex o1, Vertex o2) {
+                return o1.getDist() - o2.getDist();
+            }
+        });
+
+        if (adjList.containsKey(src)) {
+            //Add first time for source
+            src.setDist(0);
+            minDistHeap.add(src);
+            while (!minDistHeap.isEmpty()) { // That guarenties visited.size() == adjList.size()
+                src = minDistHeap.poll(); // Everytime changes
+                visited.add(src);
+                // Evaluate each edge for newly selected source and instert to the minheap (with vertex distance if earliier one is bigger)
+                for (Edge edge : adjList.get(src)) {
+                    Vertex dest = edge.getDestination();
+                    int newDist = src.getDist() + edge.getWeight();
+                    if (dest.getDist() > newDist) { // Relaxation: Add to heap if oldDist is greater than new dostance
+                        if (minDistHeap.contains(dest)) {
+                            minDistHeap.remove(dest);
+                        }
+                        dest.setDist(newDist); // Update the distance after removing and setting new distance and relax
+                        minDistHeap.add(dest);
+                    }
+                }
+            }
+
+        }
+        return visited;
+    }
+
+        //TODO::Single Source Shortest Path - Bellman Ford
+
+
+        //TODO::Cycle Detection - Union Find
 
         private void createGraph(){
         addVertex("A").addEdge("A","B",1);
@@ -279,7 +345,14 @@ import java.util.stream.Collectors;
             graph.printGraph(graph.primsMST(graph,new Vertex("A")));
             System.out.println("Kruskal MST");
             graph.printGraph(graph.kruskalMST(graph));
-
+            System.out.println("Dijkestra Shortest Path");
+            Set<Vertex> visited = graph.shortestPathDijkestra(graph, new Vertex("A"));
+            System.out.println(visited.toString());
+            Iterator itr = visited.iterator();
+            while(itr.hasNext()){
+                Vertex vertex = (Vertex) itr.next();
+                System.out.println(vertex.getLabel()+": "+vertex.getDist());
+            }
         }
     }
 

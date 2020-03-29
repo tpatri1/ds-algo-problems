@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Recursion_Permutation_Combination {
     /**
+     * 1.
      * A man puts a pair of rabbit in a closed room. Each pair produce a pair every month from second month onward(let's say they take a month
      * to mature and from second months starts produce and none of the rabbit dies).
      * How many rabbits will be in that room after a year.
@@ -26,6 +27,7 @@ public class Recursion_Permutation_Combination {
     }
 
     /**
+     * 2.
      *Every step n-> 2 * n-1 so O(n) = 2^0 +2^1+2^3... 2^(n-1) = 2^n - 1 ~ O(2^n) GP series
      * @param height - size of source stack
      * @param src - intially all disks are here in a sorted manner
@@ -44,7 +46,7 @@ public class Recursion_Permutation_Combination {
         }
     }
 
-    //alternate BFS Solution that has space complexity of O(2^n). Time complexiity is O(2^n)
+    //3. alternate BFS Solution that has space complexity of O(2^n). Time complexiity is O(2^n)
     private static List enumurateBinaryString(int height) {
         if(height==1 ){
             List result = Arrays.asList("0","1");
@@ -63,6 +65,7 @@ public class Recursion_Permutation_Combination {
 
     }
     /**
+     * 4.
      * This is a  DFS Solution that has space complexity of O(n) as at a point of time there are only one root to leaf chain exists in memory, so O(n). Time complexiity is O(2^n)
      * Input - len=2 - print 00, 01, 10,11
      * Print leaf level nodes that has the enumurated string
@@ -83,7 +86,7 @@ public class Recursion_Permutation_Combination {
         }
         return  result;
     }
-    //Decimal String -- Permutation this allows repitation 10*10*10
+    //5. Decimal String -- Permutation this allows repitation 10*10*10
     private static List<String> decimalStrings(int height){
         return decimalStringsHelper("",height);
     }
@@ -99,7 +102,7 @@ public class Recursion_Permutation_Combination {
             return result;
         }
     }
-// Permutation of inputStriing char set where repetition is allowed : charString: "abc" - ans : aaa, abb,abc,.. 3*3*3 = 25 permutation
+//6. Permutation of inputStriing char set where repetition is allowed : charString: "abc" - ans : aaa, abb,abc,.. 3*3*3 = 25 permutation
     private static void permutationsWithRepetition(String inputString){
         int index=inputString.length();
         permutationWithRepetitionHelper("",inputString, index);
@@ -124,7 +127,7 @@ public class Recursion_Permutation_Combination {
         }
         permutationWORepetitionHelper("",charList);
     }
-// We can do using a pointer and charStriing input or char array, easy with char arraylist as we can modify for each subproblem
+//7. We can do using a pointer and charStriing input or char array, easy with char arraylist as we can modify for each subproblem
     private static void permutationWORepetitionHelper(String slate, List charList) {
         if (charList.size() == 0) {
             System.out.println(slate);
@@ -138,31 +141,51 @@ public class Recursion_Permutation_Combination {
         }
     }
 
-
-    private static int[] copyRange(int[] a, int start, int end){
-        //for(int i=start; i<end)
-        return a;
+    //Combination - exclude or Include an element from the list in each recursive call
+    //https://www.youtube.com/watch?v=LGs3UzZ_8B0&list=LLKVWfjrciwHvt6ZUPrdSEWg&index=27&t=634s
+    private static List<List<Integer>> createAllSubSets(List<Integer> list){
+        List<List<Integer>> resultSet = new ArrayList<List<Integer>>();
+        //return createAllSubSets(list,new ArrayList<>(),resultSet);
+        return createAllSubSetsIterative(list);
     }
+    private static List<List<Integer>> createAllSubSets(List<Integer> list, List<Integer> partialSol, List<List<Integer>> resultSet){
 
-    private static int[] shiftZeros(int[] a){
-        int i=0, j=0;
-        while(i<a.length){
-            if(a[i]==0){
-                //j++;
-                while(a[++j]!=0 && j<a.length) {
-                    a[i++]=a[j];
-                    a[j]=0;
-                    //j++;
-                    //i++;
-                }
-                i=j;
-            }else {
-                i++;
-                j++;
+        //Base Case at leaf node
+        if(list.size()==0){
+            System.out.println("com"+partialSol);
+            resultSet.add(partialSol);
+        }
+        else {
+            //No for loop as we are need to remove the first elemt each time
+            List<Integer> subList = new ArrayList<>(list);
+            subList.remove(0);
+            List<Integer> partialSolutionNew = new ArrayList<>(partialSol);
+            partialSolutionNew.add(list.get(0));
+            //exclude the element
+            createAllSubSets(subList, partialSol,resultSet);
+            //OR include the element
+            createAllSubSets(subList, partialSolutionNew,resultSet);
+        }
+
+        return resultSet;
+    }
+    //Iterative solution for combination/subsets problem, Add the iterative element to each subset created before and add them as new subsets
+    //Time and space both O(n*2^n)
+    private static List<List<Integer>> createAllSubSetsIterative(List<Integer> list){
+        List<List<Integer>> resultSet = new ArrayList<List<Integer>>();
+        resultSet.add(new ArrayList<>());
+        for(Integer item: list){
+            List<Integer> subset = new ArrayList<>();
+            int existingSize = resultSet.size();
+            for(int i=0; i<existingSize; i++){
+                List<Integer> newSubset = new ArrayList<>(resultSet.get(i));
+                newSubset.add(item);
+                resultSet.add(newSubset);
             }
         }
-        return  a;
+        return resultSet;
     }
+
 
     public static void main(String args[]){
         long startTs = System.nanoTime();
@@ -193,6 +216,11 @@ String str ="tets";
         int[] a = {2, 4, 0, 9, -1, 0 , 5};
 //        a= shiftZeros(a);
         System.out.println(a);
+
+        List<List<Integer>> subsets = Recursion_Permutation_Combination.createAllSubSets(Arrays.asList(1,2,3));
+        for(List<Integer> subset:subsets){
+            System.out.println(subset);
+        }
 
     }
 
