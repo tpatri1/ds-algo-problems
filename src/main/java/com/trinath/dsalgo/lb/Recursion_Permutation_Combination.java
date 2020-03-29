@@ -164,7 +164,6 @@ public class Recursion_Permutation_Combination {
             //exclude the element
             createAllSubSets(subList, partialSol,resultSet);
             //OR include the element
-
             createAllSubSets(subList, partialSolutionNew,resultSet);
         }
 

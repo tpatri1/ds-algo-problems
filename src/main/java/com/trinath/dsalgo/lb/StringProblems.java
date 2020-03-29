@@ -170,9 +170,35 @@ public class StringProblems {
         }
         return result;
     }
+//Alternate using DP  https://www.youtube.com/watch?v=EIf9zFqufbU
+    static int getPalindromicSubStringsCountDP(String s){
+        int size = s.length();
+        int count=0;
+        //Create the matrix
+        int dp[][] = new int[size][size];
+        //Case -1 Fill the char position to 1= true as each of them are palindrom a[i][i] = 1 for single char
+        for(int i=0; i<size; i++){
+            dp[i][i] = 1;
+            count++;
+        }
+        // dp[row][col]==>> dp[i][j] -> substring s.substr(i,j).. i-> row j-> column ... palindromic substring is represented by 1 from i th index to j for s.substr(i,j); as we discard lower half(i.e, a[i][j] i<j) of the matrix for a[i][j]=a[j][i])
+        for(int col=1; col<size; col++){ // move in column wise and change the colum when it reacches i<j
+            for(int row=0; row<col; row++){// i<j until it reaches lower half, so only upper half across column then change column
+                if(row==col-1 && s.charAt(row)==s.charAt(col)){//case 2 - 2 adjacent char substring as i=j-1 and if they are same is palindromic
+                    dp[row][col]=1;
+                    count++;
+                }
+                else if(dp[row+1][col-1]==1 && s.charAt(row)==s.charAt(col)){// Case 3- dp[i+1][j-1]==1 the middle substring is palindromic and last two char are same
+                    dp[row][col]=1;
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
 
     private static boolean isPalindrom(String s){
-        if(s.length()<2) return false;
+        //if(s.length()<2) return false;
         int start=0;
         int end = s.length()-1;
         while(start<end){
@@ -183,6 +209,16 @@ public class StringProblems {
             end--;
         }
         return true;
+    }
+//Using recursion
+    private static boolean isPalindromRec(String s){
+        if(s.length()==1){
+            return true;
+        }
+        if(s.length()==2){
+            return s.charAt(0)==s.charAt(1);
+        }
+        return s.charAt(0)==s.charAt(s.length()-1) && isPalindrom(s.substring(1,s.length()-1)); // if len>3 if first and last char matches and inner substring is palindrom
     }
 
     static char[] getArray(String t) {
@@ -235,8 +271,14 @@ public class StringProblems {
         }
 
         System.out.println(getPalindromicSubSets("aabbbaa"));
+        long t1 = System.nanoTime();
         System.out.println(getPalindromicSubStrings("aabbbaa"));
-
+        long t2= System.nanoTime();
+        System.out.println("Timetaken n^2: "+(t2- t1));
+        System.out.println(isPalindromRec("aabdcaa"));
+        long t3= System.nanoTime();
+        System.out.println(getPalindromicSubStringsCountDP("aabbbaa"));
+        System.out.println("Timetaken using dp: "+(t3- t2));
     }
 
 }
