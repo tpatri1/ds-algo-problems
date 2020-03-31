@@ -107,7 +107,7 @@ public class Recursion_Permutation_Combination {
         int index=inputString.length();
         permutationWithRepetitionHelper("",inputString, index);
     }
-    //slate is the partial solution, subprobelm is index , as we dont modify the charString for each sub problem so, dont need to pass a char array, we ecan do by a just String
+    //slate is the partial solution, subprobelm is index , as we dont modify the charString for each sub problem so, dont need to pass a char array, we can do by a just String
     private static void permutationWithRepetitionHelper(String slate, String charString, int index) {
         if (index == 0) {
             System.out.println(slate);
@@ -170,7 +170,7 @@ public class Recursion_Permutation_Combination {
         return resultSet;
     }
     //Iterative solution for combination/subsets problem, Add the iterative element to each subset created before and add them as new subsets
-    //Time and space both O(n*2^n)
+    //Time and space both O(n*2^N
     private static List<List<Integer>> createAllSubSetsIterative(List<Integer> list){
         List<List<Integer>> resultSet = new ArrayList<List<Integer>>();
         resultSet.add(new ArrayList<>());

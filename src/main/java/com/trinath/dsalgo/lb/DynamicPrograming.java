@@ -1,5 +1,6 @@
 package com.trinath.dsalgo.lb;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +12,7 @@ public class DynamicPrograming {
         return getNthFib(n, memo);
 
     }
-
+//Problem 1
     public static int getNthFib(int n, int[] memo){
         if(n==1){
             memo[1]=0;
@@ -27,7 +28,7 @@ public class DynamicPrograming {
         return res;
     }
 
-    //https://leetcode.com/problems/maximum-subarray/ -- Kadane's algo
+    //Problem 2- https://leetcode.com/problems/maximum-subarray/ -- Kadane's algo
     private static int maxSubArraySum(int[] nums){
         if(nums.length <1){
             return Integer.MIN_VALUE;
@@ -45,8 +46,26 @@ public class DynamicPrograming {
         }
         return currMax;
     }
+    //Problem 3 - Max Sum sub sequence(not adjacent) of array
+    static int findMaxSumNonadjacent(int[] a) {
+        if(a==null || a.length==0){
+            return 0;
+        }
+        else if(a.length==1){
+            return a[0];
+        }
+        int lastMaxSum = a[1];
+        int secondLastMaxSum =a[0];
+        for(int i=2; i<a.length; i++){
+            int currMaxSum =0;
+            currMaxSum = Math.max(lastMaxSum, secondLastMaxSum+a[i]);//Main Algo,(TODO:: we can modify to return array of index as well if needed)
+            secondLastMaxSum = lastMaxSum;
+            lastMaxSum = currMaxSum;
 
-    //Longest Increasing SubSequence : https://leetcode.com/problems/longest-increasing-subsequence
+        }
+        return lastMaxSum;
+    }
+    //Prablem 4 - Longest Increasing SubSequence : https://leetcode.com/problems/longest-increasing-subsequence
     private static int longestIncreasingSubSequenceLength(int[] arr){
         int globalLongest=0;
         if(arr.length>0){
@@ -67,6 +86,92 @@ public class DynamicPrograming {
         }
         return globalLongest;
     }
+    //Problem 5 - Longest Common SubSequence
+
+    //Problem 6 -  Count Palindromic SubString(Contiguous) - DONE in StringProblems.getPalindromicSubStringsCountDP()
+
+    //Problem 7- Longest Palindromic Sub Sequence
+
+    //Problem 8 -This is actually permutation as order matters here even problem statemnt is: Combinations of Game Scoring -- How many ways we can we can write n using 1,2,4 ex- n=3 , 1,1,1 ; 1,2; 2,1
+    private static int findCombinationSumN(int n, int[] choice){
+        int count =0;
+        if(n<=0){
+            if(n==0){
+                count++;
+                return count;
+            }
+            return count; // if you are only use this return as in line 104
+        }
+        for(int c: choice){
+            count+=findCombinationSumN(n-c,choice);
+        }
+
+//        count+=findCombinationSumN(n-1);
+//        count+=findCombinationSumN(n-2);
+//        count+=findCombinationSumN(n-4);
+        return count;
+    }
+    private static int findCombinationSumNDP(int n, int[] memo) {
+        if (n < 0) {
+            return 0;
+        }
+        if(n==0){
+            memo[0]=1;
+            return  1;
+        }
+        if(memo[n]!=0){
+            return memo[n];
+        }
+        memo[n] = findCombinationSumNDP(n-1,memo)+findCombinationSumNDP(n-2,memo)+findCombinationSumNDP(n-4,memo);
+        return memo[n];
+
+    }
+
+
+    //Problem 9 - How many ways you can change a amount with array of coins
+    private static  int coinChange(int amount, int[] coins, int[] memo){
+        memo[0] =1;
+        if(memo[amount]!=0){
+            return memo[amount];
+        }
+        for(int c:coins){
+            for(int i=c; i<=amount; i++) {
+                memo[i] += memo[i - c];
+            }
+        }
+        return memo[memo.length-1];
+
+    }
+
+    //Problem 10 - Levenstein edit distance
+
+    //Problem 11 - Min number of ways you can change the amount using denominations  - also min coin to change
+    //https://www.youtube.com/watch?v=Y0ZqKpToTic
+    private static int minCoinsToChange(int amount, int[] coins){
+        Arrays.sort(coins);
+        int[][] dp = new int[coins.length][amount+1];// have a zero column just to make easy for array
+        //Fill up first row for coin 1
+        for(int col=0; col<=amount; col++){
+            dp[0][col] = amount/coins[0] ; //Note:: there must be one coin that can satisfy all amount to populate first row
+        }
+        //Fill other row
+        for(int col=1; col<=amount; col++){
+            for(int row = 1; row<coins.length; row++){
+                if(col-coins[row]>=0) {
+                    dp[row][col] = Math.min(dp[row - 1][col], dp[row][col - coins[row]] + 1);
+                }
+                else{
+                    dp[row][col] = dp[row - 1][col];
+                }
+            }
+        }
+        return dp[coins.length-1][amount];
+    }
+
+    //Problem 12 - Knapshak`
+
+    //Problem 13 - Rod Cutting
+
 
     public static void main(String s[]){
         System.out.println(getNthFib(1));
@@ -81,5 +186,16 @@ public class DynamicPrograming {
         System.out.println("Longest Sub Seq "+longestIncreasingSubSequenceLength(arr1));
         int[] arr2 = {0};
         System.out.println("Longest Sub Seq "+longestIncreasingSubSequenceLength(arr2));
+        int[] a ={1, 6, 10, 14, 50, -20, -5, -10};
+        System.out.println("Max non adjacent sub seq sum "+findMaxSumNonadjacent(a));
+        int[] choice={1,2,5};
+        System.out.println("Combination "+findCombinationSumN(7, choice));
+        int[] memo = new int[10+1];
+        System.out.println("Combination "+findCombinationSumNDP(10, memo));
+        int[] coins ={1,2,5};
+        int[] memo1 =new int[7+1];
+        System.out.println("Number of way for coin change "+coinChange(7,coins, memo1));
+        int[] coins1 ={1,5,6,8};
+        System.out.println("Min number Coin change "+minCoinsToChange(11,coins1));
     }
 }
