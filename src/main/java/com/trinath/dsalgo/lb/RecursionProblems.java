@@ -5,7 +5,10 @@ import org.jcp.xml.dsig.internal.dom.Utils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-//Head recursion vs tail recursion where processing happens where? Tail recursion is like a loop so, no need to hold to prev state, head recursion go to to top of recusrsive stack first so it holds the rpev state
+//Head recursion vs tail recursion where processing happens where? Tail recursion is like a loop so, no need to hold to prev state, head recursion go to to top of recusrsive stack first so it holds the previous state
+//Return the value in base case if you use that result in other cases else, you can have pass by ref type(e, array not int) result and add to it in base case
+//Permutation - arrangement - where you loop through for recursive call, when all the recursive call finish for i=0 end (get to the leaf) then i++ -> i=1 starts in a loop
+//Combination --choose from a set and put in a bag - where order does not matter and you focus on include or exclude in next recursive call
 //https://www.youtube.com/watch?v=lG6HxO7cDRw
 //https://www.youtube.com/watch?v=qH7fVuYlOOc&list=PLNmW52ef0uwsMppECkGBpoao1p0_xWX2E
 public class RecursionProblems {
@@ -179,6 +182,8 @@ public class RecursionProblems {
         }
 
     }
+    //Problem - String Palindrom check , DONE in StringProblems.isPalindromRec()
+
     private static void swap(List<Integer> list, int i, int j){
         int temp = list.get(i);
         list.set(i,list.get(j));

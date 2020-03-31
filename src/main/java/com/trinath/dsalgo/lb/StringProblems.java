@@ -145,6 +145,7 @@ public class StringProblems {
     }
 
     /**
+     * Problem - Count palindromic substrings in a string
      * Add each character to the previously generated substrings to generate new substrings ex- [a,b,c] - a,  b,ab, c,bc,abc
      * //There is a alternate method to get Substring using 2 for loops generate all sub strings by increasing j starting j=0 and adding one char each time for for all i
      * @param s
@@ -170,7 +171,7 @@ public class StringProblems {
         }
         return result;
     }
-//Alternate using DP  https://www.youtube.com/watch?v=EIf9zFqufbU
+//Problem - Count palindromic substrings in a string - Alternate solution using DP  https://www.youtube.com/watch?v=EIf9zFqufbU
     static int getPalindromicSubStringsCountDP(String s){
         int size = s.length();
         int count=0;
