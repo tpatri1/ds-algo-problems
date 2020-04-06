@@ -1,4 +1,4 @@
-package com.trinath.dsalgo.lb.Algo_Greedy_Sorting;
+package com.trinath.dsalgo.lb.DivideNConqur_Greedy_Sorting;
 
 public class BasicSortings {
     // Select an index from index 0 till length-1 and get the right element for the selected index; bring the smalest element to index zero by comparing other elements and move to the next index.
