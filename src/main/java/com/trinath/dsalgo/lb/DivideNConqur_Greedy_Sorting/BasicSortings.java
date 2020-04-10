@@ -121,7 +121,7 @@ public class BasicSortings {
             if(arr[start]>arr[pivot] && arr[end]<arr[pivot]){
                 swap(start,end, arr); // Swap once when both pointer can't proceed any more
             }
-            else {
+            else {//Dont do anything if pivot is in correct position
                 if (arr[start] <= arr[pivot]) { // We need to do <= as pivot is start; if we do start++ in the beginning then we can have strict lesser condition
                     start++;
                 }
