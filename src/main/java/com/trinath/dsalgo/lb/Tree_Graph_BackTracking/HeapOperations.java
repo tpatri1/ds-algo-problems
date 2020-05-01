@@ -1,4 +1,4 @@
-package com.trinath.dsalgo.self;
+package com.trinath.dsalgo.lb.Tree_Graph_BackTracking;
 
 import java.util.Arrays;
 import java.util.Scanner;

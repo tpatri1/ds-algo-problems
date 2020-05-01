@@ -119,9 +119,9 @@ public class GraphOperations {
         return visited;
     }
 
-    //Minimum Spanning tree(connect all nodes with minimum sum of weights) - Prims
+    //Minimum Spanning tree(connect all nodes with minimum sum of weights) - Prims - Check WeightedGraph.java
 
-    //Minimum Spanning tree - Kruskal
+    //Minimum Spanning tree - Kruskal - Check WeightedGraph.java
 
 
     /**

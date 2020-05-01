@@ -1,4 +1,4 @@
-package concurrency.problems;
+package com.trinath.concurrency;
 
 import java.util.Random;
 
@@ -7,6 +7,7 @@ public class DemoThreadUnsafe {
     int randInt;
 
     public static void  main(String args[]) throws InterruptedException {
+
 
         ThreadUnsafeCounter counter = new  ThreadUnsafeCounter();
 
