@@ -4,6 +4,8 @@ MIT Algo 1 - http://ocw.mit.edu/6-006F11 :: https://www.youtube.com/watch?v=HtSu
 MIT Algo 2: http://ocw.mit.edu/6-046JS15 :: https://www.youtube.com/watch?v=2P-yW7LQr08&list=PLkToMFwOtNHiJtcBu0piSLKnLVGOF9vaV
 MIT Algo 3: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/
 
+MIT advanced data structure - 6.851 - https://www.youtube.com/watch?v=T0yzrZL1py0&list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf
+
 OR--
 
 Princeton Algo 1: https://www.coursera.org/learn/algorithms-part1?
@@ -15,20 +17,29 @@ CTCI author- https://www.youtube.com/playlist?list=PLX6IKgS15Ue02WDPRCmYKuZicQHi
 https://www.youtube.com/playlist?list=PLjhq5EHRYAeJc6-oMw43yxY6LtieTNV9a
 
 Graph: youtube.com/watch?v=MV2HrLJi2AU
+
 BOOK:
 -----
-Algorithm Desiign Manual By Skiena
-CTCI
-EPI
+Algorithm Desiign Manual By Skiena - P1
+EPI - P1
+CTCI - P2
 
 Distributed Systems
 ======================
-University of Waterloo: https://www.youtube.com/watch?v=w8KFPWkK0bI&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N
+
+P1 - MIT : https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB
+                        (P2 -- Depricate --University of Waterloo: https://www.youtube.com/watch?v=w8KFPWkK0bI&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
+DDIA
+DS algo approach Book: https://mtjagtap.files.wordpress.com/2018/08/santosh-kumar-distributed-systems-algorithmic-approach-information-812.pdf
+
 
 
 Operating Systems
 =====================
-https://www.youtube.com/watch?v=hry_qqXLej8&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM
+I studied this : 2013 - https://www.youtube.com/watch?v=hry_qqXLej8&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM
+
+OSETP
+Galvin book
 
 
 Compilers
@@ -43,6 +54,17 @@ Machine Learning
 =================
 Coursera Andrew Ng
 Learning from Data Caltech
+Nano Degree
+
+Parallel Functional Programming in JAVA
+===============================
+P1-Douglas Schmidt - Complete class CS891 Vanderbelt -https://www.youtube.com/watch?v=kADtRTxPaf8&list=PLZ9NgFYEMxp5NbV2NQ2moSX-V_Jv1aiGH
+https://www.udemy.com/course/java-memory-management/
+
+Concurrency in Practice book
+Effective Java
+                     P2- There is a 3 course in course era by Rice University - parallelism, concurrency and distributed programming
+
 
 
 

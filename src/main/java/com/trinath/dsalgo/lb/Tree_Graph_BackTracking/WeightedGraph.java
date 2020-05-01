@@ -2,6 +2,7 @@ package com.trinath.dsalgo.lb.Tree_Graph_BackTracking;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.Collections.*;
 
 
 
@@ -234,14 +235,26 @@ import java.util.stream.Collectors;
      * @return
      */
         private Map<Vertex, List<Edge>> kruskalMST(WeightedGraph graph){
+
             Map<Vertex,List<Edge>> adjList = graph.adjList;
             Map<Vertex, List<Edge>> mst = new HashMap<>(); // Same structure as graph adjacency list but no cycles
             Set<Vertex> visited = new HashSet<Vertex>();
+
+            for(Vertex v: graph.adjList.keySet()){
+                makeSet(v.getLabel().charAt(0)-'A');
+            }
             PriorityQueue<Edge> minHeapEdges = buildMinHeapEdge(adjList);
-            while(adjList.size()!=visited.size() && !minHeapEdges.isEmpty()){ //UNTIL all vertices are visited
+            while( !minHeapEdges.isEmpty()){ //TODO:: WE Should take only those min edge that does not form cycle, so below implementation is not correct
                 Edge minEdge = minHeapEdges.poll();
-                visited.add(minEdge.getSource());
-                visited.add(minEdge.getDestination());
+
+                long set1 = findSet(minEdge.getSource().getLabel().charAt(0)-'A');
+                long set2 = findSet(minEdge.getDestination().getLabel().charAt(0)-'A');
+                if(set1==set2){
+                    continue;
+                }
+                union(minEdge.getSource().getLabel().charAt(0)-'A', minEdge.getDestination().getLabel().charAt(0)-'A');
+                //visited.add(minEdge.getSource());// Not required for Kruskal but required for Prims
+                //visited.add(minEdge.getDestination());// // Not required for Kruskal but required for Prims
                 List<Edge> existingEdges = mst.getOrDefault(minEdge.getSource(),new ArrayList<>());
                 existingEdges.add(minEdge);
                 mst.put(minEdge.getSource(),existingEdges);
@@ -264,6 +277,7 @@ import java.util.stream.Collectors;
                 }
             }
         return edgeMinHeap;
+
         }
 
 
@@ -313,7 +327,25 @@ import java.util.stream.Collectors;
         }
         return visited;
     }
+        //Union find
+    int[] parent = new int[52];// 26 char *2
+        void makeSet(int v) {
 
+            parent[v] = v;
+        }
+
+    int findSet(int v) {
+        if (v == parent[v])
+            return v;
+        return findSet(parent[v]);
+    }
+
+    void union(int a, int b) {
+        a = findSet(a);
+        b = findSet(b);
+        if (a != b)
+            parent[b] =a;
+    }
         //TODO::Single Source Shortest Path - Bellman Ford
 
 
@@ -333,6 +365,7 @@ import java.util.stream.Collectors;
         }
 
         public static void main(String args[]){
+            System.out.println('A');
             WeightedGraph graph = new WeightedGraph();
             graph.createGraph();
             graph.printGraph(graph.adjList);

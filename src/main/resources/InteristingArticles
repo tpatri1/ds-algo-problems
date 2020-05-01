@@ -1,6 +1,9 @@
 DataStructures
 =====================
 Bloom filter: https://medium.com/better-programming/probabilistic-data-structures-bloom-filter-5374112a7832
+http://pages.cs.wisc.edu/~cao/papers/summary-cache/node8.html
+https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1178/lectures/26-EsotericDataStructures/EsotericDataStructures.pdf
+
 Segment Tree : https://hackernoon.com/practical-data-structures-for-frontend-applications-when-to-use-segment-trees-9c7cdb7c2819
 Recursion : http://web.mit.edu/6.005/www/fa15/classes/10-recursion/
 
@@ -20,8 +23,27 @@ https://medium.com/@sonusharma.mnnit/apache-kafka-in-depth-49aae1e844be
 https://medium.com/thousandeyes-engineering/kafka-topics-pitfalls-and-insights-38bafc791a83
 https://medium.com/thousandeyes-engineering/kafka-topics-pitfalls-and-insights-38bafc791a83
 
+Distributed Event Scheduuler :Big Ben:  https://medium.com/walmartlabs/an-approach-to-designing-distributed-fault-tolerant-horizontally-scalable-event-scheduler-278c9c380637
+
+Papers:
+--------
+GFS : https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf
+Replication state machine : https://pdos.csail.mit.edu/6.824/papers/schneider-rsm.pdf
+Apache Spark : https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf
+Cassandra notes (and dynamo and big table , see botton of the page)   : https://stephenholiday.com/notes/cassandra/
 
 
+
+Threads and Concurrency:
+============================
+
+Concepts:
+    Volatile : https://stackoverflow.com/questions/106591/what-is-the-volatile-keyword-useful-for
+    ReentrantLock: https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
+                    https://dzone.com/articles/what-are-reentrant-locks
+                    https://www.youtube.com/watch?v=PK8M49RDXWE
+    Semaphore : https://www.youtube.com/watch?v=shH38znT_sQ
+    Reordering effect in multithread: https://www.comp.nus.edu.sg/~tulika/pact04.pdf
 
 
 
@@ -32,6 +54,15 @@ System Design
 ===============
 Airbnb : https://medium.com/airbnb-engineering/building-services-at-airbnb-part-1-c4c1d8fa811b
 
+Distributed Rate Limiter: https://www.youtube.com/watch?v=FU4WlwfS3G0
+System design Channel : 1.Distributed Rate Limiter, 2.Distributed Cache, 3.Message Queue, 4.Design Notification Service, 5.Top K hitters
+ https://www.youtube.com/watch?v=OOKpXfneQ9Q
+
+Some more : 6. distributed key value, 7. Tyny URL
+https://www.youtube.com/watch?v=fMZMm_0ZhK4&list=PLYUHhtdJuakFoJOQZhyPIsVlo33lx4Sk3
+
+Some more:
+https://www.youtube.com/playlist?list=PL73KFetZlkJSZ9vTDSJ1swZhe6CIYkqTL
 
 
 

@@ -1,4 +1,4 @@
-package concurrency.problems;
+package com.trinath.concurrency;
 
 public class SumArray {
         public static void main( String args[] ) throws InterruptedException {

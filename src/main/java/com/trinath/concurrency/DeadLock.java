@@ -1,4 +1,4 @@
-package concurrency.problems;
+package com.trinath.concurrency;
 
 class Demonstration {
 
