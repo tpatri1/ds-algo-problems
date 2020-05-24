@@ -44,6 +44,7 @@ Concepts:
                     https://www.youtube.com/watch?v=PK8M49RDXWE
     Semaphore : https://www.youtube.com/watch?v=shH38znT_sQ
     Reordering effect in multithread: https://www.comp.nus.edu.sg/~tulika/pact04.pdf
+    Replication paper: https://pdos.csail.mit.edu/6.824/papers/schneider-rsm.pdf
 
 
 
@@ -63,6 +64,11 @@ https://www.youtube.com/watch?v=fMZMm_0ZhK4&list=PLYUHhtdJuakFoJOQZhyPIsVlo33lx4
 
 Some more:
 https://www.youtube.com/playlist?list=PL73KFetZlkJSZ9vTDSJ1swZhe6CIYkqTL
+
+Netflix :
+https://medium.com/swlh/a-design-analysis-of-cloud-based-microservices-architecture-at-netflix-98836b2da45f
+
+Confluent(Kafka) CTO blog and video : http://www.benstopford.com/
 
 
 
