@@ -49,10 +49,10 @@ public class BlockingQueue<T> {
     Runnable pro = new Runnable() {
             @Override
             public void run() {
-                for(int i=0; i<50; i++) {
+                for(int i=0; i<100; i++) {
                     try {
                         enqueue((T) new Integer(i));
-                        System.out.println("enqueue"+i+Thread.currentThread().getName());
+                        System.out.println(Thread.currentThread().getName()+"enqueue"+i);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -62,9 +62,9 @@ public class BlockingQueue<T> {
      Runnable con = new Runnable() {
         @Override
         public void run() {
-            for(int i=0; i<50; i++) {
+            for(int i=0; i<100; i++) {
                 try {
-                    System.out.println("dequeue"+dequeue()+Thread.currentThread().getName());
+                    System.out.println(Thread.currentThread().getName()+"dequeue"+dequeue());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -74,7 +74,7 @@ public class BlockingQueue<T> {
 
     public  void runTest() throws InterruptedException {
         Thread producer = new Thread(pro);
-        Thread.sleep(500);
+        //Thread.sleep(10);
         Thread consumer = new Thread(con);
         producer.start();
         consumer.start();
@@ -87,7 +87,7 @@ public class BlockingQueue<T> {
         }
     }
     public static void main(String args[]) throws InterruptedException {
-        BlockingQueue<Integer> bq = new BlockingQueue(10);
+        BlockingQueue<Integer> bq = new BlockingQueue(5);
         bq.runTest();
     }
 
