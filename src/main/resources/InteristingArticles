@@ -46,6 +46,9 @@ Concepts:
     Reordering effect in multithread: https://www.comp.nus.edu.sg/~tulika/pact04.pdf
     Replication paper: https://pdos.csail.mit.edu/6.824/papers/schneider-rsm.pdf
 
+    Javamemory model(Google talk) https://www.youtube.com/watch?v=WTVooKLLVT8
+    Doug Lea  -- Engineering Concurrent Library Components - - https://www.youtube.com/watch?v=sq0MX3fHkro
+
 
 
 

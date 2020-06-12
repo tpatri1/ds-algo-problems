@@ -1,5 +1,9 @@
 package com.trinath.concurrency;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class OddEvenPrint {
@@ -72,6 +76,9 @@ public class OddEvenPrint {
     public static void main(String args[]){
         OddEvenPrint oddEvenPrint = new OddEvenPrint();
         oddEvenPrint.oddEvenPrint();
+        //ExecutorService es = Executors.newFixedThreadPool(5);
+        //Future f = es.submit((Runnable) oddEvenPrint);
+        //f.get(); // synchronously wait for future (asyn task) to complete
     }
 
 }

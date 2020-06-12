@@ -93,8 +93,68 @@ public class LRUCache {
         }
     }
 
-    public static void main(String args[]){
+    /*
+    // Linked list operations
+// LinkedListNode(int data)
+// LinkedListNode(int key, int data)
+// LinkedListNode(int data, LinkedListNode next)
+// LinkedListNode(int data, LinkedListNode next, LinkedListNode arbitrary_pointer)
 
+    class LRUCache {
+        int capacity;
+
+        //LinkedListNode holds key and value pairs
+        HashMap<Integer,LinkedListNode> cache;
+        LinkedList<LinkedListNode> cacheVals;
+
+        public LRUCache(int capacity) {
+            this.capacity = capacity;
+            cache = new HashMap<Integer,LinkedListNode>(capacity);
+            cacheVals = new LinkedList<LinkedListNode>();
+        }
+
+
+        int get(int key) {
+            if(cache.containsKey(key)){
+                LinkedListNode node = cache.get(key);
+                cacheVals.remove();
+                LinkedListNode node1 = new LinkedListNode(node.data);
+                cacheVals.add(node1);
+                return node.data;
+            }
+            return -1;
+        }
+
+        void set(int key, int value) {
+            LinkedListNode node = cache.get(key);
+            if(node==null){
+                if(cacheVals.size()==capacity){
+                    //Evict
+                    LinkedListNode node1 = cacheVals.remove();
+                    cache.remove(node1.data);
+                }
+                node = new LinkedListNode(key, value);
+                cacheVals.addLast(node);
+                cache.put(key, node);
+            }
+            cacheVals.remove(node);
+            cacheVals.addLast(node);
+
+        }
+
+        String print() {
+            String result = "";
+            ListIterator<LinkedListNode> iterator = cacheVals.listIterator(0);
+            while(iterator.hasNext()){
+                LinkedListNode node = iterator.next();
+                result += "(" + node.key + "," + node.data + ")";
+            }
+            return result;
+        }
+
+        */
+
+    public static void main(String args[]){
         LRUCache cache = new LRUCache(5);
         cache.setElement(1,10);
         cache.setElement(2,20);
