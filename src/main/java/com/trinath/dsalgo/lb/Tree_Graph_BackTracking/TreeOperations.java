@@ -1,5 +1,6 @@
 package com.trinath.dsalgo.lb.Tree_Graph_BackTracking;
 
+import java.io.*;
 import java.util.*;
 import java.util.concurrent.Semaphore;
 
@@ -549,6 +550,52 @@ public class TreeOperations {
     private void printAllPathToLeaves(Node node){
 
     }
+    static int M = Integer.MIN_VALUE;
+    private static void serialize(Node root, ObjectOutputStream oos) throws IOException {
+     //base case
+        if(root==null){
+            oos.writeInt(M);
+            return;
+        }
+        oos.writeInt(root.val); // Pre order
+        serialize(root.left, oos);
+        serialize(root.left, oos);
+    }
+
+    private static Node deserialize(ObjectInputStream ois) throws IOException {
+    Node root = new Node(ois.readInt());
+    Node node = root;
+        int val = ois.readInt();
+        boolean isLeft = true;
+        Stack<Node> stack = new Stack<>();
+        while(ois.available()>=0) {
+            val = ois.readInt();
+            if (val == M) {
+                stack.pop();
+                continue;
+            }
+            if(isLeft){
+                node.left = new Node(val);
+                node = node.left;
+            }
+            else{
+                node.right = new Node(val);
+                node = node.right;
+            }
+        }
+        return root;
+    }
+//public static Node deserialize(ObjectInputStream stream) throws java.io.IOException {
+//    int val = stream.readInt();
+//    if (val == M) {
+//        return null;
+//    }
+//
+//    Node node = new Node(val);
+//    node.left = deserialize(stream);
+//    node.right = deserialize(stream);
+//    return node;
+//}
 
     public static int deleteZeroSumSubtreeRec(Node node){
 
@@ -566,7 +613,64 @@ public class TreeOperations {
         }
         return node.val+left_sum+right_sum;
     }
-private static Node setRoot(){
+
+     static int maxLevel = -1;
+    private static void printRightView(Node root){
+        System.out.println("Print right view");
+
+        int level =0;
+        printRightViewRec(root, level);
+        System.out.println("Print right view end");
+    }
+
+    private static void printRightViewRec(Node root, int level) {
+        if(root==null){
+            return;
+        }
+        if(maxLevel<level){
+            System.out.println(root.val);
+            maxLevel =level;
+        }
+        printRightViewRec(root.right,level+1); // this wil hit maxLevl<level and print first for right view
+        printRightViewRec(root.left,level+1);
+    }
+
+    static int sum1=0;// Can be done easily with a gloabal variable
+    private static int sumLargerNodes(Node root, int target){
+        sumLargerNodesHelperAlt(root,target);
+        System.out.println("Sum of larger node 1st approach: "+sum1);
+        //alt
+        int sum= sumLargerNodesHelper(root, target);
+        System.out.println("Sum of larger node 2nd approach: "+sum);
+        return sum;
+
+
+    }
+    private static int sumLargerNodesHelper(Node root, int target){
+        if(root==null){
+            return 0;
+        }
+        if(root.val>=target){
+            //sum1+=root.val;
+             return root.val +sumLargerNodesHelper(root.right, target)+sumLargerNodesHelper(root.left, target);
+        }else{
+            return sumLargerNodesHelper(root.right, target)+sumLargerNodesHelper(root.left, target);
+        }
+
+    }
+    private static void sumLargerNodesHelperAlt(Node root, int target){
+        if(root==null){
+            return ;
+        }
+        if(root.val>=target) {
+            sum1 += root.val;
+        }
+        sumLargerNodesHelperAlt(root.right, target);
+        sumLargerNodesHelperAlt(root.left, target);
+
+    }
+
+    private static Node setRoot(){
     Node root = new Node(6);
     TreeOperations bst = new TreeOperations(root);
 
@@ -609,7 +713,9 @@ private static Node setRoot(){
         //System.out.println("Start In Order>>");
         //bst.inOrderRec(bst.deleteNode(bst.root,8));
         bst.levelOrderTraversal(root);
+        sumLargerNodes(root,5);
         System.out.println("height "+getHeightOfBST(root));
+        printRightView(root);
 
         bst.levelOrderTraversalAlt2(root);
 
@@ -632,6 +738,35 @@ private static Node setRoot(){
         root1.right =new Node(6);
         root1.left.left = new Node(-3);
         root1.left.right = new Node(-2);
+
+
+        try {
+//            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//            ObjectOutputStream stream= new ObjectOutputStream(baos);
+//            serialize(root1,stream);
+//            System.out.println("OOS "+stream);
+//            ByteArrayInputStream bis = new ByteArrayInputStream(baos.toByteArray());
+//            ObjectInputStream ois = new ObjectInputStream(bis);
+
+
+            ByteArrayOutputStream baostream = new ByteArrayOutputStream();
+            ObjectOutputStream stream = new ObjectOutputStream(baostream);
+            serialize(root, stream);
+            stream.close();
+
+            ByteArrayInputStream baistream = new ByteArrayInputStream(
+                    baostream.toByteArray());
+            ObjectInputStream  istream = new ObjectInputStream(baistream);
+            Node rootDeserialized = deserialize(istream);
+
+            System.out.println("deserialize ");
+            bst.preOrderIterative(rootDeserialized);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         deleteZeroSumSubtreeRec(root1);
         System.out.println(" after delete zero sub tree");
         bst.levelOrderTraversal(root1);

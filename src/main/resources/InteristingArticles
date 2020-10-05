@@ -46,6 +46,9 @@ Concepts:
     Reordering effect in multithread: https://www.comp.nus.edu.sg/~tulika/pact04.pdf
     Replication paper: https://pdos.csail.mit.edu/6.824/papers/schneider-rsm.pdf
 
+    Javamemory model(Google talk) https://www.youtube.com/watch?v=WTVooKLLVT8
+    Doug Lea  -- Engineering Concurrent Library Components - - https://www.youtube.com/watch?v=sq0MX3fHkro
+
 
 
 
@@ -70,9 +73,16 @@ https://medium.com/swlh/a-design-analysis-of-cloud-based-microservices-architect
 
 Confluent(Kafka) CTO blog and video : http://www.benstopford.com/
 
+System design qna  - https://github.com/donnemartin/system-design-primer
+
+
 
 
 
 Operating Systems:
 =======================
 https://medium.com/cracking-the-data-science-interview/the-10-operating-system-concepts-software-developers-need-to-remember-480d0734d710
+
+Problems By Company
+-------------------
+http://www.learn4master.com/algorithms/leetcode-problems-classified-by-company

@@ -169,7 +169,7 @@ public class Recursion_Permutation_Combination {
 
         return resultSet;
     }
-    //Iterative solution for combination/subsets problem, Add the iterative element to each subset created before and add them as new subsets
+    //Iterative solution for combination/subsets problem, Add the iterative element to each subset created before and add them as new subsets, they dont repeat  and ordering  does not matter as each subsets are different
     //Time and space both O(n*2^N
     private static List<List<Integer>> createAllSubSetsIterative(List<Integer> list){
         List<List<Integer>> resultSet = new ArrayList<List<Integer>>();
@@ -184,6 +184,24 @@ public class Recursion_Permutation_Combination {
             }
         }
         return resultSet;
+    }
+
+    static void findKthPermutation(List<Character> v, int k, StringBuilder result) {
+        List<String> permutations = new ArrayList<>();
+        permutationHelper(v,"",permutations);
+        //result =  new StringBuilder(permutations.get(k));
+        result.append(permutations.get(k-1));
+    }
+
+    static void permutationHelper(List<Character> v, String slate, List<String> permutations){
+        if(v.size()==0){
+            permutations.add(slate);
+        }
+        for(int i=0; i<v.size(); i++){
+            ArrayList<Character> newList = new ArrayList<Character>(v);
+            newList.remove(i);
+            permutationHelper(newList,slate+v.get(i),permutations);
+        }
     }
 
 
@@ -221,6 +239,15 @@ String str ="tets";
         for(List<Integer> subset:subsets){
             System.out.println(subset);
         }
+
+        List<Character> chars = new ArrayList<>();
+        chars.add('1');
+        chars.add(('2'));
+        chars.add(('3'));
+        //chars.add(('4'));
+        StringBuilder res = new StringBuilder();
+        findKthPermutation(chars,5,res);
+        System.out.println(">>>"+res);
 
     }
 

@@ -64,12 +64,15 @@ public class PingPong {
         }
     });
 
+
+
     Thread t2 = new Thread(new Runnable() {
         @Override
         public void run() {
             for(int i=val; i<MAX;){
-                val = ++i;
                 System.out.println("Ping "+ val);
+                val = ++i;
+
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
@@ -79,11 +82,43 @@ public class PingPong {
             }
         }
     });
+    Thread t11 = new Thread(() -> {
+        for (int lv = val; lv < MAX; )
+            // Only do the body of the if statement when
+            // lv changes.
+            if (lv != val) {
+                print("pong(" + val + ")");
+                // Read lv from volatile mVal.
+                lv = val;
+            }
+    });
+    Thread t21  = new Thread(() -> {
+        for (int lv = val; val < MAX; ) {
+            print("ping(" + ++lv + ")");
+
+            // Set volatile mVal to next value of lv.
+            val = lv;
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    });
+    private static void print(String s) {
+        System.out.println(Thread.currentThread()
+                + ": "
+                + s);
+    }
     private void printPongAlt() throws InterruptedException {
         t1.start();
         t2.start();
         t1.join();
         t2.join();
+//        t11.start();
+//        t21.start();
+//        t11.join();
+//        t21.join();
 
     }
 

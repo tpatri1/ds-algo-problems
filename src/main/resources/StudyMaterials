@@ -30,7 +30,7 @@ Distributed Systems
 P1 - MIT : https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB
                         (P2 -- Depricate --University of Waterloo: https://www.youtube.com/watch?v=w8KFPWkK0bI&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
 DDIA
-DS algo approach Book: https://mtjagtap.files.wordpress.com/2018/08/santosh-kumar-distributed-systems-algorithmic-approach-information-812.pdf
+Dis Systems algo approach Book: https://mtjagtap.files.wordpress.com/2018/08/santosh-kumar-distributed-systems-algorithmic-approach-information-812.pdf
 
 
 
@@ -44,11 +44,11 @@ Galvin book
 
 Compilers
 ==========
-Stanford Lagunita
+Stanford Online
 
 Networking
 ===========
-Stanford Lagunita
+Stanford Online
 
 Machine Learning
 =================
@@ -58,13 +58,15 @@ Nano Degree
 
 Parallel Functional Programming in JAVA
 ===============================
-P1-Douglas Schmidt - Complete class 2019 CS891 Functional Parallel Programming  - Vanderbelt -https://www.youtube.com/watch?v=kADtRTxPaf8&list=PLZ9NgFYEMxp5NbV2NQ2moSX-V_Jv1aiGH
-                    Concurrent OO Programming CS891 2020 --  https://www.youtube.com/watch?v=XrEapQbTOY8&list=PLZ9NgFYEMxp6IM0Cddzr_qjqfiGC2pq1a
+P1-Douglas Schmidt - <Trinath>completed  - Concurrent Object Oriented Programming CS891 2020 --  https://www.youtube.com/playlist?list=PLZ9NgFYEMxp6IM0Cddzr_qjqfiGC2pq1a
+
+                    Complete class 2019 CS891 Functional Parallel Programming  - Vanderbelt -https://www.youtube.com/watch?v=kADtRTxPaf8&list=PLZ9NgFYEMxp5NbV2NQ2moSX-V_Jv1aiGH
+
 https://www.udemy.com/course/java-memory-management/
 
 Concurrency in Practice book
 Effective Java
-                     P2- There is a 3 course in course era by Rice University - parallelism, concurrency and distributed programming
+P2- There is a 3 course in course era by Rice University - parallelism, concurrency and distributed programming
 
 
 
