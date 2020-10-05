@@ -168,5 +168,7 @@ public class LRUCache {
         cache.deleteIfExists(6);
         cache.displayLRUCache();
         System.out.println();
+
+
     }
 }

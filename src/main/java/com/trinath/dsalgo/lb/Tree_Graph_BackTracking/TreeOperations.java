@@ -614,7 +614,63 @@ public class TreeOperations {
         return node.val+left_sum+right_sum;
     }
 
-private static Node setRoot(){
+     static int maxLevel = -1;
+    private static void printRightView(Node root){
+        System.out.println("Print right view");
+
+        int level =0;
+        printRightViewRec(root, level);
+        System.out.println("Print right view end");
+    }
+
+    private static void printRightViewRec(Node root, int level) {
+        if(root==null){
+            return;
+        }
+        if(maxLevel<level){
+            System.out.println(root.val);
+            maxLevel =level;
+        }
+        printRightViewRec(root.right,level+1); // this wil hit maxLevl<level and print first for right view
+        printRightViewRec(root.left,level+1);
+    }
+
+    static int sum1=0;// Can be done easily with a gloabal variable
+    private static int sumLargerNodes(Node root, int target){
+        sumLargerNodesHelperAlt(root,target);
+        System.out.println("Sum of larger node 1st approach: "+sum1);
+        //alt
+        int sum= sumLargerNodesHelper(root, target);
+        System.out.println("Sum of larger node 2nd approach: "+sum);
+        return sum;
+
+
+    }
+    private static int sumLargerNodesHelper(Node root, int target){
+        if(root==null){
+            return 0;
+        }
+        if(root.val>=target){
+            //sum1+=root.val;
+             return root.val +sumLargerNodesHelper(root.right, target)+sumLargerNodesHelper(root.left, target);
+        }else{
+            return sumLargerNodesHelper(root.right, target)+sumLargerNodesHelper(root.left, target);
+        }
+
+    }
+    private static void sumLargerNodesHelperAlt(Node root, int target){
+        if(root==null){
+            return ;
+        }
+        if(root.val>=target) {
+            sum1 += root.val;
+        }
+        sumLargerNodesHelperAlt(root.right, target);
+        sumLargerNodesHelperAlt(root.left, target);
+
+    }
+
+    private static Node setRoot(){
     Node root = new Node(6);
     TreeOperations bst = new TreeOperations(root);
 
@@ -657,7 +713,9 @@ private static Node setRoot(){
         //System.out.println("Start In Order>>");
         //bst.inOrderRec(bst.deleteNode(bst.root,8));
         bst.levelOrderTraversal(root);
+        sumLargerNodes(root,5);
         System.out.println("height "+getHeightOfBST(root));
+        printRightView(root);
 
         bst.levelOrderTraversalAlt2(root);
 
@@ -680,6 +738,8 @@ private static Node setRoot(){
         root1.right =new Node(6);
         root1.left.left = new Node(-3);
         root1.left.right = new Node(-2);
+
+
         try {
 //            ByteArrayOutputStream baos = new ByteArrayOutputStream();
 //            ObjectOutputStream stream= new ObjectOutputStream(baos);
