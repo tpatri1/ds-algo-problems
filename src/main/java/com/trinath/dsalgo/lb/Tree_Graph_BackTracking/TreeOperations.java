@@ -681,6 +681,21 @@ public class TreeOperations {
 
     return root;
 }
+
+private static void treeNodeCounts(Node root, Map<Node, Integer> counts) {
+    counts.put(root, 1);
+    if (root.left == null && root.right == null) {
+        return;
+    }
+    if(root.left != null){
+        treeNodeCounts(root.left, counts);
+    counts.put(root, counts.get(root) + counts.get(root.left));
+    }
+    if (root.right != null) {
+        treeNodeCounts(root.right, counts);
+        counts.put(root, counts.get(root) + counts.get(root.right));
+    }
+}
     public static void main(String args[]){
         Node root = new Node(5);
         TreeOperations bst = new TreeOperations(root);
@@ -716,6 +731,13 @@ public class TreeOperations {
         sumLargerNodes(root,5);
         System.out.println("height "+getHeightOfBST(root));
         printRightView(root);
+
+        Map<Node, Integer> countMap = new HashMap<>();
+        treeNodeCounts(root,countMap);
+        for(Node node: countMap.keySet()){
+            System.out.println("Node val "+node.val+" "+countMap.get(node));
+        }
+        //---Start of new tree, looks like tree is mutated after this--//
 
         bst.levelOrderTraversalAlt2(root);
 

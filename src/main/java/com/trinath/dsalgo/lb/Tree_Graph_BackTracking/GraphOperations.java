@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 //Cycle detection using Post order DFS if part of set and Union Find
 //Topological Sort
 //Shortest Path
+//TODO:: We can get all adjacent nodes for a node from adjacency matrix- i.e, row for that node O(n), but can be done from adj list- O(1) to get adjaceent nodes as well, so better to use adjacency list for shortest dijkestra algo path etc
 public class GraphOperations {
     static class Vertex{
         String label;
@@ -166,11 +167,12 @@ public class GraphOperations {
      * https://www.youtube.com/watch?v=rG2-_lgcZzo  - Queue BFS based
      * Topological Sort using BFS and converting a dependency matrix to adjacencylist grap representation
      *[2, 3] means 2 is dependent on 3 like 3->2 if one node is dependent on multiple iis written by [2,3], [2,1]
+     * Alternate Algo- Indegree is the colum value for that vertex, calculate for all vertex, then push all the vertex whose indegree is zero, take one node out of quueue and  now get all adjacent nodes(here we do from adjacency matrix- row for that node O(n), but can be done from adj list- O(1) to get adjaceent nodes as well, so better to use adjacency list for shortest dijkestra algo path etc) and reduce it's indegree, when it beecomes zero add to queue and takee next elem from queue
      * @param dependencies
      * @return
      * @throws Exception
      */
-    private Queue<Integer> topologicalSort_BFS(int[][] dependencies) throws Exception {
+    private Queue<Integer> topologicalSort_BFS(int[][] dependencies) throws Exception { //this approach uses 2 dimentional adjacency metrics, the index (i,j) REPRESENTS there is an edge from i to j vertex..
 
         Map<Integer,Integer> inDegree = new HashMap<>();//can be done as array if from 0 to n ..new int[dependencies.length];
         Map<Integer, List<Integer>> adjList = new HashMap<>(); // [2,1] [3,1] becomes 3<-1->2 that is  1->2, 1->3 that is : {1,[2,3]}

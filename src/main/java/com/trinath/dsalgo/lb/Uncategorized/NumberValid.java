@@ -27,7 +27,7 @@ class NumberValid{
         AFTER_DECIMAL,
         UNKNOWN
     }
-
+//0.234.
     static STATE getNextSate(STATE currentState, char ch){
         switch(currentState){
             case START:
