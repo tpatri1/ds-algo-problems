@@ -56,6 +56,9 @@ Concepts:
 
 System Design
 ===============
+compiled list : https://github.com/checkcheckzz/system-design-interview#intro
+InfoQ in Youtube: ex - https://www.youtube.com/watch?v=hnpzNAPiC0E
+
 Airbnb : https://medium.com/airbnb-engineering/building-services-at-airbnb-part-1-c4c1d8fa811b
 
 Distributed Rate Limiter: https://www.youtube.com/watch?v=FU4WlwfS3G0
@@ -76,9 +79,6 @@ Confluent(Kafka) CTO blog and video : http://www.benstopford.com/
 System design qna  - https://github.com/donnemartin/system-design-primer
 
 
-
-
-
 Operating Systems:
 =======================
 https://medium.com/cracking-the-data-science-interview/the-10-operating-system-concepts-software-developers-need-to-remember-480d0734d710
@@ -86,3 +86,17 @@ https://medium.com/cracking-the-data-science-interview/the-10-operating-system-c
 Problems By Company
 -------------------
 http://www.learn4master.com/algorithms/leetcode-problems-classified-by-company
+
+Event driven systems
+=======================
+part1 -  https://medium.com/swlh/the-engineers-guide-to-event-driven-architectures-benefits-and-challenges-3e96ded8568b
+part2 -  https://medium.com/swlh/the-6-things-you-need-to-know-about-event-driven-architectures-38e11fdcb5a
+java challanges in microservice - https://oskar-uit-de-bos.medium.com/the-performance-challenge-in-java-microservices-e51cce3977e9
+Exactly once delivery sematics- https://segment.com/blog/exactly-once-delivery/
+Netflix orchastration engine - https://netflix.github.io/conductor/
+
+Distributed Database internals
+==============================
+Cssandra read write https://medium.com/swlh/log-structured-merge-trees-9c8e2bea89e8
+LSM tree: http://www.benstopford.com/2015/02/14/log-structured-merge-trees/
+Big Table paper - http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf

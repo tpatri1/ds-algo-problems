@@ -168,7 +168,10 @@ public class LRUCache {
         cache.deleteIfExists(6);
         cache.displayLRUCache();
         System.out.println();
-
+        LinkedList<Integer> dll = new LinkedList<>();
+        dll.addFirst(1);
+        dll.addFirst(2);
+        dll.removeLast();
 
     }
 }

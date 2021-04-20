@@ -1,7 +1,6 @@
 package com.trinath.dsalgo.lb.Tree_Graph_BackTracking;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  A min heap is a a heap where the root is the min elem.
@@ -78,14 +77,25 @@ public class HeapOperations {
         heapifyUp();
     }
 
-    private void poll(){ //remove root
-
+    private int poll(){ //swap , remove, heapifyDown
+        int res = items[0];
         items[0]= items[size-1];
+        items[size-1]=0;//null
         size--;
-        heapifyDown();
+        heapifyDown(0);
+        return res;
+    }
+
+    private int removeAt(int index){
+        int res = items[index];
+        items[index] =items[size-1];// this removes the index element
+        items[size-1]=0;//null
+        size--;
+        heapifyDown(index);
+        return res;
     }
 // if parent is bigger then swap
-    private void heapifyUp(){
+    private void heapifyUp(){ // we can have index i as an arg and pass size-1 from caller
         int ptr =size-1;
         while(hasParent(ptr) && items[ptr] < getParent(ptr))
 
@@ -96,9 +106,9 @@ public class HeapOperations {
 
     //
 
-    private void heapifyDown(){
+    private void heapifyDown(int index){//can be converted to any index i
 
-        int index = 0;
+        //int index = 0;
         while(hasLeftChild(index) ){
             int smallerChildIndex = getLeftChildIndex(index);
             if(hasRightChild(index) && getLeftChild(index) > getRightChild(index)){
@@ -115,7 +125,15 @@ public class HeapOperations {
 
         }
     }
+//Delete from a heap - swap with last elem and heapifydown
 
+    //Heapify all, last non leaf((h.size()-1)/2) node to root, call heapify down.- this will give O(n) instead of nlogn
+
+    //Check if it is a max heap or mean  heap or nothing -- parent is smaller than children- min heap
+
+    //remove anyIndex
+
+    //poll() - remove top of heap - O(1), then sawp last elem and heapify down
     private void print(){
         for(int i=0; i<items.length; i++){
             System.out.println(items[i]);
@@ -123,22 +141,38 @@ public class HeapOperations {
     }
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        HeapOperations h = new HeapOperations();
-        Scanner scanner = new Scanner(System.in);
-        int numberOfInput = scanner.nextInt();
-        for(int i=0; i< numberOfInput; i++){
-            int type = scanner.nextInt();
+//        HeapOperations h = new HeapOperations();
+//        Scanner scanner = new Scanner(System.in);
+//        int numberOfInput = scanner.nextInt();
+//        for(int i=0; i< numberOfInput; i++){
+//            int val = scanner.nextInt();
+//
+//        }
+        PriorityQueue minHeap= new PriorityQueue();//default min heap
+        minHeap.add(4);
+        minHeap.add(2);
+        minHeap.add(5);
+        minHeap.add(1);
 
-            if(type==1){
-                h.add(scanner.nextInt());
+        System.out.println("top elm "+minHeap.peek());
+        minHeap.poll();
+        System.out.println("2nd top elm "+minHeap.peek());
+
+        PriorityQueue maxHeap= new PriorityQueue(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2-o1;//-ve is high priority than 0 than 1
             }
-            if(type==2){
-                h.poll();
-            }
-            if(type==3){
-                h.print();
-            }
-        }
+        });//default min heap
+        maxHeap.add(4);
+        maxHeap.add(2);
+        maxHeap.add(5);
+        maxHeap.add(1);
+        System.out.println("top elm "+maxHeap.peek());
+        maxHeap.poll();
+        System.out.println("2nd top elm "+maxHeap.peek());
+
+
     }
     //
 }

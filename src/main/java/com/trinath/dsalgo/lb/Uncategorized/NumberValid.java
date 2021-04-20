@@ -1,5 +1,7 @@
 package com.trinath.dsalgo.lb.Uncategorized;
 
+import java.util.Arrays;
+
 class NumberValid{
     static boolean isNumberValid(String s) {
         STATE currentState = STATE.START;
@@ -25,9 +27,18 @@ class NumberValid{
         INTEGER,
         DECIMAL,
         AFTER_DECIMAL,
-        UNKNOWN
-    }
+        UNKNOWN;
 
+        public static STATE valuOf(String s){
+            try {
+                return STATE.valueOf(s);
+            }catch (Exception e){
+                return null;
+            }
+
+        }
+    }
+//0.234.
     static STATE getNextSate(STATE currentState, char ch){
         switch(currentState){
             case START:
@@ -56,6 +67,8 @@ class NumberValid{
     }
 
     public static void main(String args[]){
+        System.out.println(Arrays.asList("1",2,3));
+        System.out.println(STATE.valueOf(""));
         System.out.print(isNumberValid("-22.22."));
     }
 }

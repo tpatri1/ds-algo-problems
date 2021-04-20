@@ -36,7 +36,7 @@ Dis Systems algo approach Book: https://mtjagtap.files.wordpress.com/2018/08/san
 
 Operating Systems
 =====================
-I studied this : 2013 - https://www.youtube.com/watch?v=hry_qqXLej8&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM
+UC Berkeley on Youtube : I studied this : 2013 - https://www.youtube.com/watch?v=hry_qqXLej8&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM
 
 OSETP
 Galvin book
@@ -44,16 +44,21 @@ Galvin book
 
 Compilers
 ==========
-Stanford Online
+TODO:: Stanford Online
 
 Networking
 ===========
-Stanford Online
+Stanford Online : Youtube : https://www.youtube.com/watch?v=nh970YyKRDA&list=PLEAYkSg4uSQ2dr0XO_Nwa5OcdEcaaELSG
+Gossip: https://github.com/edwardcapriolo/gossip/blob/master/src/main/java/com/google/code/gossip/manager/PassiveGossipThread.java
+
+Database Management
+-------------------
+TO_COMPLETE::Stanford Online : https://www.youtube.com/watch?v=D-k-h0GuFmE&list=PL9ysvtVnryGpnIj9rcIqNDxakUn6v72Hm&index=1
 
 Machine Learning
 =================
-Coursera Andrew Ng
-Learning from Data Caltech
+Coursera Andrew Ng (it's in Youtube aswell)
+Learning from Data Caltech (in Youtube)
 Nano Degree
 
 Parallel Functional Programming in JAVA
@@ -69,8 +74,16 @@ Effective Java
 P2- There is a 3 course in course era by Rice University - parallelism, concurrency and distributed programming
 
 
-
+--Optimization---
+Java Profiling :: https://www.youtube.com/watch?v=5QLqzyVZ0LE&list=PLTW_Z2cv4l0UFMJWCWcqEUG3GmT2zQq4u
 
 ------ Algorithms Sub topics------
 Recursion videos - https://www.youtube.com/watch?v=qH7fVuYlOOc&list=PLNmW52ef0uwsMppECkGBpoao1p0_xWX2E
+
+--
+Apache Spark Udemy
+Kafka Udemy
+Apache Solr
+C* basics - read and write path and architecture
+Mining of Massive data sets - Udemy
 

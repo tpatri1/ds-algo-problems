@@ -1,4 +1,8 @@
 package com.trinath.dsalgo.lb.Recursion_DP;
+
+import java.util.HashMap;
+import java.util.Map;
+
 //https://leetcode.com/problems/trapping-rain-water/
 public class TrapRainWater {
 
@@ -71,5 +75,7 @@ public class TrapRainWater {
         int arr1[]={0,1,0,2,1,0,1,3,2,1,2,1};
         System.out.println(calcRainWater_dynamic(arr1));
         System.out.println(calcRainWater_2Ptrs(arr1));
+        Map<String,Integer> map = new HashMap<>();
+
     }
 }

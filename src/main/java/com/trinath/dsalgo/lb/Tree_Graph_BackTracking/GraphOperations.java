@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 //Cycle detection using Post order DFS if part of set and Union Find
 //Topological Sort
 //Shortest Path
+//TODO:: We can get all adjacent nodes for a node from adjacency matrix- i.e, row for that node O(n), but can be done from adj list- O(1) to get adjaceent nodes as well, so better to use adjacency list for shortest dijkestra algo path etc
 public class GraphOperations {
     static class Vertex{
         String label;
@@ -80,7 +81,7 @@ public class GraphOperations {
         }
     }
      */
-    //DFS Use a stack
+    //DFS Use a stack TODO:: Check DfsBfs class
     private Set<String> dfs(GraphOperations graph, Vertex root){
         Set<String> visited = new LinkedHashSet<>();
         Stack<String> stack = new Stack();
@@ -98,9 +99,25 @@ public class GraphOperations {
         }
         return visited;
     }
+    //Alternative Recusrsive implementation
+    private Set<String> dfs(GraphOperations graph){
+        Set<String> result = new HashSet<>();
+        dfsRec(graph, graph.adjList.keySet().iterator().next(),result);//passes first vertex
+        return result;
+    }
+
+    private void dfsRec(GraphOperations graph,Vertex v, Set<String> result){
+        List<Vertex> children = graph.adjList.get(v);//get the children
+        result.add(v.label);
+        for(Vertex vertex: children){//iterate and check if not visited, recursively call
+            if(!result.contains(vertex.label)) {
+                dfsRec(graph, vertex, result);
+            }
+        }
+    }
 
 
-    //BFS
+    //BFS TODO:: Check DfsBfs class
     private Set<String> bfs(GraphOperations graph, Vertex root){
         Set<String> visited = new LinkedHashSet<>();//ordered
         Queue<String> queue = new LinkedList<>();
@@ -137,8 +154,8 @@ public class GraphOperations {
         Set<Vertex> visited = new HashSet<>();
 
         //Iterate each vertex
-        Iterator itr = adjList.keySet().iterator();
-        while(itr.hasNext()){
+        Iterator itr = adjList.keySet().iterator(); // Instead of this taken from key we can take from the children itself
+        while(itr.hasNext()){// Processed for all vertices
             Vertex vertex = (Vertex) itr.next();
             if(!visited.contains(vertex)){
                 topologicalSortHelper(vertex, sorted, visited, adjList);
@@ -149,7 +166,7 @@ public class GraphOperations {
     }
 
     private void topologicalSortHelper(Vertex vertex, Stack<Vertex> sorted, Set<Vertex> visited, Map<Vertex, List<Vertex>> adjList){
-        visited.add(vertex);
+        visited.add(vertex);// previously filtered as processed for only non visited
         if(adjList.containsKey(vertex)) {
             for (Vertex child : adjList.get(vertex)) {// If for leaf node, that has no dependency then add to the stack, then move to parent and add it as well
                 if (visited.contains(child)) {
@@ -166,15 +183,17 @@ public class GraphOperations {
      * https://www.youtube.com/watch?v=rG2-_lgcZzo  - Queue BFS based
      * Topological Sort using BFS and converting a dependency matrix to adjacencylist grap representation
      *[2, 3] means 2 is dependent on 3 like 3->2 if one node is dependent on multiple iis written by [2,3], [2,1]
+     * Alternate Algo- Indegree is the colum value for that vertex, calculate for all vertex, then push all the vertex whose indegree is zero, take one node out of quueue and  now get all adjacent nodes(here we do from adjacency matrix- row for that node O(n), but can be done from adj list- O(1) to get adjaceent nodes as well, so better to use adjacency list for shortest dijkestra algo path etc) and reduce it's indegree, when it beecomes zero add to queue and takee next elem from queue
      * @param dependencies
      * @return
      * @throws Exception
      */
-    private Queue<Integer> topologicalSort_BFS(int[][] dependencies) throws Exception {
+    private Queue<Integer> topologicalSort_BFS(int[][] dependencies) throws Exception { //this approach uses 2 dimentional adjacency metrics, the index (i,j) REPRESENTS there is an edge from i to j vertex..
 
         Map<Integer,Integer> inDegree = new HashMap<>();//can be done as array if from 0 to n ..new int[dependencies.length];
-        Map<Integer, List<Integer>> adjList = new HashMap<>(); // [2,1] [3,1] becomes 3<-1->2 that is  1->2, 1->3 that is : {1,[2,3]}
-        //Crteate an adjacency list from 2d array
+        Map<Integer, List<Integer>> adjList = new HashMap<>(); // [2,1] [3,1] becomes 3<-1->2 that is  1->2, 1->3 that is : {1,[2,3]}//TODO It can be opposite in some problem definition
+        //Create an adjacency list from 2d array
+        //We have to create either adjacency list or adjacency matrix representation of graph from dependency matrix to calculate indegree
         for(int[] row : dependencies){ // process every record of matrix or 2D array
             List<Integer> list = adjList.getOrDefault(row[1],new ArrayList<>());// second colum is the dependency to 1st column
             list.add(row[0]);
@@ -196,7 +215,7 @@ public class GraphOperations {
        while(!queue.isEmpty()){
            int item = queue.poll();
            sorted.add(item);
-           if(!adjList.containsKey(item)){
+           if(!adjList.containsKey(item)){//does not have any outward edge
                continue;
            }//else
            for(int neighbour:adjList.get(item)){
@@ -243,11 +262,17 @@ public class GraphOperations {
     }
 
     public static void main(String args[]){
+        List<String> list = Arrays.asList("trinath","patri","ma");
+        System.out.println("before "+list);
+        list = test(list);
+        System.out.println("after "+list);
+
         GraphOperations graph = new GraphOperations();
         graph.createGraph();
         graph.printGraph(graph);
         //https://www.baeldung.com/java-graphs
         System.out.println("DFS: "+graph.dfs(graph,new Vertex("A")));
+        System.out.println("DFC Recursive"+graph.dfs(graph));
         System.out.println("BFS: "+graph.bfs(graph,new Vertex("A")));
         //assertEquals("[Bob, Rob, Maria, Alice, Mark]", graph.dfs(graph, new Vertex("Bob").toString());
         //assertEquals("[Bob, Alice, Rob, Mark, Maria]", graph.bfs(graph, new Vertex("Bob")).toString());
@@ -269,5 +294,13 @@ public class GraphOperations {
             int item = sortedBFS.remove();
             System.out.println(item);
         }
+    }
+
+    private static List<String> test(List<String> list){
+        Set<String> set = new HashSet<>(list);
+        set.remove("patri");
+
+        return new ArrayList<>(set);
+
     }
 }
