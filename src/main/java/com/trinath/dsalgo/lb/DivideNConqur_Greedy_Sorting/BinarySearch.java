@@ -60,7 +60,7 @@ public class BinarySearch {
             return  bSearchRec(arr, k, mid+1,e);
         }
     }
-
+//find the max number of a bitonic array [1, 2, 4, 7, 13, 8, 6] - bitonic index elem is 13 that is max number the before and after are smaller numer than that
     static int bitonicIndex(int[] arr, int start, int end){
         if(end>start) return -1;
         int mid  = (start+end)/2;
@@ -107,7 +107,34 @@ public class BinarySearch {
         }
     }
 
+    public enum Direction {
+        NORTH {
+            @Override
+            public Direction getOppositeDirection() {
+                return SOUTH;
+            }
+        },
+        SOUTH {
+            @Override
+            public Direction getOppositeDirection() {
+                return NORTH;
+            }
+        },
+        EAST {
+            @Override
+            public Direction getOppositeDirection() {
+                return WEST;
+            }
+        },
+        WEST {
+            @Override
+            public Direction getOppositeDirection() {
+                return EAST;
+            }
+        };
+        public abstract Direction getOppositeDirection();
 
+    }
     public static void main(String args[]){
 
         int arr[] ={1,2,3,3,3,3,3,4,5,6,7};
@@ -122,5 +149,7 @@ public class BinarySearch {
         //int[] arrRotated = {4,5,6,7,8,9,10,1,2,3};// rotated 3 times, find the pivot element and apply binary search in two arrays
         int[] arrRotated ={33, 37, 45, 61, 71, 72, 73, 355, 0, 1, 21};
         System.out.println("Pivot "+findPivot(arrRotated,0,arrRotated.length-1));
+
+        System.out.println(Direction.EAST.getOppositeDirection());
     }
 }

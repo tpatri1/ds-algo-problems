@@ -40,7 +40,7 @@ public class LinkedListProblems {
 
         if(flag){
             curr.next = null;
-            curr =reverse(first);
+            curr = reverseRec(first);
             first.next = returnVal;
             return curr;
         }
@@ -48,11 +48,11 @@ public class LinkedListProblems {
         return curr;
     }
 
-    static Node reverse(Node head){
+    static Node reverseRec(Node head){
         if(head==null || head.next==null){
             return head;
         }
-        Node result = reverse(head.next);
+        Node result = reverseRec(head.next);
         head.next.next = head;
         head.next=null;
         return result;
@@ -120,8 +120,12 @@ public class LinkedListProblems {
         head.next.next.next.next.next.next.next = new Node(8);
 
         //printLL(reverseEvenNodes(head));
-        printLL(reverse(head));
+        printLL(reverseRec(head));
         //printLL(reverseAlt(head));
+        char[] chars = new char[3];
+        String s =  chars.toString();
+
+        chars[1]= 65;
 
 
     }

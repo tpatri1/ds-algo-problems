@@ -697,6 +697,11 @@ private static void treeNodeCounts(Node root, Map<Node, Integer> counts) {
     }
 }
     public static void main(String args[]){
+
+//        ArrayList<Integer> list = new ArrayList<Integer>();
+//        list.set(0, 2);
+//        System.out.println(list.get(1));
+
         Node root = new Node(5);
         TreeOperations bst = new TreeOperations(root);
 
@@ -792,6 +797,8 @@ private static void treeNodeCounts(Node root, Map<Node, Integer> counts) {
         deleteZeroSumSubtreeRec(root1);
         System.out.println(" after delete zero sub tree");
         bst.levelOrderTraversal(root1);
+
+
 
     }
 

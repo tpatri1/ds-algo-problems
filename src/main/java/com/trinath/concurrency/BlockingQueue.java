@@ -7,7 +7,7 @@ public class BlockingQueue<T> {
         int size = 0;
         int capacity;
         int head = 0; // or front to dequeue
-        int tail = 0; //or rear to dequeue
+        int tail = 0; //or rear to enqueue
         Object obj = new Object();
 
         public BlockingQueue(int capacity) {

@@ -1,6 +1,7 @@
 package com.trinath.dsalgo.lb.Recursion_DP;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Recursion_Permutation_Combination {
     /**
@@ -204,6 +205,38 @@ public class Recursion_Permutation_Combination {
         }
     }
 
+    public static List<List<Integer>> findPermutations(int[] nums) {
+        System.out.println(" Find permutation");
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
+        for(int i=0; i<nums.length; i++){
+            list.add(nums[i]);
+        }
+        permitationRec(list, result, new ArrayList<>());
+        return result;
+    }
+
+    private static void permitationRec(List<Integer> list,List<List<Integer>> result, List<Integer> partial){
+        if(list.size()==0){
+            result.add(partial);
+            System.out.println("partial"+partial);
+            //partial = new ArrayList<>();
+            return;
+        }
+        //int n= list.size();
+
+        for(int i=0; i<list.size(); i++){
+            // int p = nums.remove(i);
+            List<Integer> newList = new ArrayList<Integer>(list);
+            int p = newList.remove(i);
+            List<Integer> newPartial = new ArrayList<>(partial);
+            newPartial.add(p);
+            permitationRec(newList, result, newPartial);
+
+        }
+
+    }
+
 
     public static void main(String args[]){
         long startTs = System.nanoTime();
@@ -248,6 +281,31 @@ String str ="tets";
         StringBuilder res = new StringBuilder();
         findKthPermutation(chars,5,res);
         System.out.println(">>>"+res);
+        findPermutations(new int[]{1, 2,3});
+
+        List<List<Integer>> meetings = new ArrayList<>();
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(3);
+        list1.add(0);
+        meetings.add(list1);
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(2);
+        list2.add(0);
+        meetings.add(list2);
+
+        meetings = meetings.stream()
+                .sorted((o1,o2) ->
+//        {
+//            return o1.get(0)-o2.get(0);
+//        }
+                Integer.compare(o1.get(0), o2.get(0))
+        )
+        .collect(Collectors.toList());
+
+        for(List<Integer> meeting: meetings){
+            System.out.println(meeting.get(0));
+        }
+
 
     }
 

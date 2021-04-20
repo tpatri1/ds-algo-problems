@@ -49,6 +49,7 @@ TODO:: Stanford Online
 Networking
 ===========
 Stanford Online : Youtube : https://www.youtube.com/watch?v=nh970YyKRDA&list=PLEAYkSg4uSQ2dr0XO_Nwa5OcdEcaaELSG
+Gossip: https://github.com/edwardcapriolo/gossip/blob/master/src/main/java/com/google/code/gossip/manager/PassiveGossipThread.java
 
 Database Management
 -------------------

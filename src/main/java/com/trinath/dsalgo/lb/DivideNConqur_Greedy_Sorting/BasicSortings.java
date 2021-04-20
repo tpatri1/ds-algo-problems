@@ -31,7 +31,7 @@ public class BasicSortings {
             int elem = arr[i];
             while(j>0 && elem<arr[j]){ // Smaller to left and left of index i is already sorted
                     //swap(j,j-1,arr); // Dont need swap Just shift when condition met and insert at last
-                    arr[j+1] = arr[j]; // arr[j] can be inserted at any time when found suitable
+                    arr[j+1] = arr[j]; // arr[j] can be inserted at any time when found suitable https://www.youtube.com/watch?v=i-SKeOcBwko
                 j--;
             }
                 arr[j+1] = elem; // inserted at j+1 as j= i-1
@@ -56,7 +56,7 @@ public class BasicSortings {
     int size = arr.length;
     //Heapify each element from second lowest level
         for(int i=size/2 -1;i>=0;i-- ){
-            heapifyDown(i,size-1,arr);
+            heapifyDown(i,size,arr);//instead of size-1 as to take care of array size < 3
         }
       //Take out and swap
       for(int i=0; i<size-1; i++){
@@ -275,6 +275,7 @@ public class BasicSortings {
         printArray(merge(e3,0,3,7));
         merge1(e4,0,3,7);
         printArray(e4);
+
     }
 
 
