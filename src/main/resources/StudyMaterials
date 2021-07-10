@@ -1,3 +1,7 @@
+General Comp Science
+======================
+https://github.com/manjunath5496/The-Art-of-Computer-Programming-Books
+
 Data Structures and Algorithm
 ==============================
 MIT Algo 1 - http://ocw.mit.edu/6-006F11 :: https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
@@ -27,16 +31,23 @@ CTCI - P2
 Distributed Systems
 ======================
 
-P1 - MIT : https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB
-                        (P2 -- Depricate --University of Waterloo: https://www.youtube.com/watch?v=w8KFPWkK0bI&list=PLawkBQ15NDEkDJ5IyLIJUTZ1rRM9YQq6N)
+(best) - MIT : https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB
+Martin klepmann(DDIA author): https://www.youtube.com/watch?v=UEAMfLPZZhE&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB
 DDIA
 Dis Systems algo approach Book: https://mtjagtap.files.wordpress.com/2018/08/santosh-kumar-distributed-systems-algorithmic-approach-information-812.pdf
+Or stanford graduate certificate
 
+Introduction of computer systems:
+==============================
+stanford(liitle of evrything - very good) - https://www.youtube.com/watch?v=_LFGjZ0Sc6I&list=PLai-xIlqf4JmTNR9aPCwIAOySs1GOm8sQ
+Caltech - https://www.youtube.com/watch?v=i3usO4RZ898&list=PL3swII2vlVoXiqUBV524pKEsP1iBN4UBU
 
 
 Operating Systems
 =====================
-UC Berkeley on Youtube : I studied this : 2013 - https://www.youtube.com/watch?v=hry_qqXLej8&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM
+UC Berkeley on Youtube : Taken already : 2013 - https://www.youtube.com/watch?v=hry_qqXLej8&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM
+MIT - https://www.youtube.com/watch?v=dv4mXBsv6TI&list=PLacuG5pysFbDQU8kKxbUh4K5c1iL5_k7k
+Caltech( very good) - https://www.youtube.com/watch?v=Hf4wvrgSHx8&list=PL3swII2vlVoVbav6FV98pidq6BsTN4u56
 
 OSETP
 Galvin book
@@ -44,16 +55,13 @@ Galvin book
 
 Compilers
 ==========
-TODO:: Stanford Online
+Stanford - https://learning.edx.org/course/course-v1:StanfordOnline+SOE.YCSCS1+3T2020/home
 
 Networking
 ===========
-Stanford Online : Youtube : https://www.youtube.com/watch?v=nh970YyKRDA&list=PLEAYkSg4uSQ2dr0XO_Nwa5OcdEcaaELSG
+(Best)Stanford Online : Youtube : https://www.youtube.com/watch?v=nh970YyKRDA&list=PLEAYkSg4uSQ2dr0XO_Nwa5OcdEcaaELSG
 Gossip: https://github.com/edwardcapriolo/gossip/blob/master/src/main/java/com/google/code/gossip/manager/PassiveGossipThread.java
 
-Database Management
--------------------
-TO_COMPLETE::Stanford Online : https://www.youtube.com/watch?v=D-k-h0GuFmE&list=PL9ysvtVnryGpnIj9rcIqNDxakUn6v72Hm&index=1
 
 Machine Learning
 =================
@@ -63,7 +71,7 @@ Nano Degree
 
 Parallel Functional Programming in JAVA
 ===============================
-P1-Douglas Schmidt - <Trinath>completed  - Concurrent Object Oriented Programming CS891 2020 --  https://www.youtube.com/playlist?list=PLZ9NgFYEMxp6IM0Cddzr_qjqfiGC2pq1a
+(Best)-Douglas Schmidt - <Trinath>completed  - Concurrent Object Oriented Programming CS891 2020 --  https://www.youtube.com/playlist?list=PLZ9NgFYEMxp6IM0Cddzr_qjqfiGC2pq1a
 
                     Complete class 2019 CS891 Functional Parallel Programming  - Vanderbelt -https://www.youtube.com/watch?v=kADtRTxPaf8&list=PLZ9NgFYEMxp5NbV2NQ2moSX-V_Jv1aiGH
 
@@ -79,6 +87,15 @@ Java Profiling :: https://www.youtube.com/watch?v=5QLqzyVZ0LE&list=PLTW_Z2cv4l0U
 
 ------ Algorithms Sub topics------
 Recursion videos - https://www.youtube.com/watch?v=qH7fVuYlOOc&list=PLNmW52ef0uwsMppECkGBpoao1p0_xWX2E
+
+----
+Database management and systems:
+===================================
+https://online.stanford.edu/programs/databases-graduate-program?mkt_tok=MTk0LU9DUS00ODcAAAF9RFMalkrXLK4soWumROfhJIBu9o3qkK8wBwKSfgArNao8pCg5toFel_qo_LREY0_UVMnSZMu_DAdj5BOV6Q1ZmhSfdvKc8nZRBG0zuAWXrLwYBw
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-830-database-systems-fall-2010/readings/
+(Sql focused dbms- stanford )- https://www.youtube.com/watch?v=D-k-h0GuFmE&list=PL9ysvtVnryGpnIj9rcIqNDxakUn6v72Hm&index=2  OR https://learning.edx.org/course/course-v1:StanfordOnline+SOE.YDB-ADVSQL0001+2T2020/home
+
+(System focused - Best- berkely ) - https://www.youtube.com/watch?v=SbrJYYbu3jg&list=PLhMnuBfGeCDPtyC9kUf_hG_QwjYzZ0Am1&index=2  || https://archive.org/details/UCBerkeley_Course_Computer_Science_186 || https://cs186berkeley.net/
 
 --
 Apache Spark Udemy

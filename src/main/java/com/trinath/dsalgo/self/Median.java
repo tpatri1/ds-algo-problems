@@ -1,5 +1,6 @@
 package com.trinath.dsalgo.self;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Median {
@@ -41,6 +42,33 @@ public class Median {
         }
         return pq.peek();
 
+    }
+
+    private PriorityQueue<Double> minHeap = new PriorityQueue<>();
+    private PriorityQueue<Double>    maxHeap = new PriorityQueue<Double>((a, b)-> Double.valueOf(b).compareTo((double)a));
+    //minHeap size - maxHeap Size >=1 so rebalance size from mean heap to max heap,
+    //if total odd size then get from minheap, else take the avg of each peak
+    public void addNum(int num) {
+        minHeap.add((double)num);
+        if(minHeap.size()>maxHeap.size()+1){
+            System.out.println("inserting "+num+" rebalancing " +minHeap.peek()+" "+maxHeap.peek()+" maxheap size "+maxHeap.size());
+            //rebalnce
+            double n = (double)minHeap.poll();
+            System.out.println("inserting to max heap"+n);
+            maxHeap.add(n);
+            System.out.println("max heap peak "+maxHeap.peek()+" maxheap size "+maxHeap.size());
+        }
+    }
+
+    public double getMedian() {
+        System.out.println("size "+minHeap.size()+" "+maxHeap.size());
+        if((minHeap.size()+maxHeap.size())%2==1){
+            System.out.println(minHeap.peek());
+            return (double)minHeap.peek();
+        }else{
+            System.out.println(minHeap.peek()+" "+maxHeap.peek());
+            return Double.valueOf(minHeap.peek()+maxHeap.peek())/2;
+        }
     }
 
 
