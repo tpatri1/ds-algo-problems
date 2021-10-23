@@ -15,6 +15,9 @@ Recursion : http://web.mit.edu/6.005/www/fa15/classes/10-recursion/
 
 Distributed Systems
 ========================
+General:
+Transactions : Martin Kleppmann - https://www.youtube.com/watch?v=5ZjhNTM8XU8
+
 Kafka :
 -------
 https://medium.com/pharos-production/kafka-using-java-e10bfeec8638https://medium.com/pharos-production/kafka-using-java-e10bfeec8638
@@ -22,6 +25,8 @@ https://medium.com/swlh/understanding-kafka-a-distributed-streaming-platform-9a0
 https://medium.com/@sonusharma.mnnit/apache-kafka-in-depth-49aae1e844be
 https://medium.com/thousandeyes-engineering/kafka-topics-pitfalls-and-insights-38bafc791a83
 https://medium.com/thousandeyes-engineering/kafka-topics-pitfalls-and-insights-38bafc791a83
+https://www.youtube.com/watch?v=BuE6JvQE_CY - Martin's talk kafka as a database
+Interview design qn - https://serhatgiydiren.github.io/system-design-interview-distributed-message-queue
 
 Distributed Event Scheduuler :Big Ben:  https://medium.com/walmartlabs/an-approach-to-designing-distributed-fault-tolerant-horizontally-scalable-event-scheduler-278c9c380637
 
@@ -31,6 +36,9 @@ GFS : https://static.googleusercontent.com/media/research.google.com/en//archive
 Replication state machine : https://pdos.csail.mit.edu/6.824/papers/schneider-rsm.pdf
 Apache Spark : https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf
 Cassandra notes (and dynamo and big table , see botton of the page)   : https://stephenholiday.com/notes/cassandra/
+                https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlAboutReads.html
+                https://marikalam.medium.com/study-guide-cassandra-data-consistency-496e5bf9cadb
+                http://www.benstopford.com/2015/02/14/log-structured-merge-trees/
 
 
 
@@ -100,3 +108,10 @@ Distributed Database internals
 Cssandra read write https://medium.com/swlh/log-structured-merge-trees-9c8e2bea89e8
 LSM tree: http://www.benstopford.com/2015/02/14/log-structured-merge-trees/
 Big Table paper - http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf
+
+Interview Qns:
+++++++++++++++++
+Along with AE and Edu 1 , 2, and book
+https://medium.com/google-cloud
+https://medium.com/system-design-concepts/distributed-cache-system-design-9560f7dd07f2
+https://medium.com/google-cloud/system-designing-google-sheet-bdf12321b99c
